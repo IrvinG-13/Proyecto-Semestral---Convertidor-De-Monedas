@@ -6,24 +6,47 @@
     <title>Proyecto Convertidor De Monedas</title>
     <!--CSS-->
     <link rel="stylesheet" href="../CSS/Home.css">
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
     <!----------------------ENCABEZADO--------------------------->
     <header>
-        <nav>
-            <button onclick="ir('Home')">Inicio</button>
-            <button onclick="ir('Billetera')">Billetera</button>
-            <button onclick="ir('Mapa')">Mapa</button>
-            <button onclick="ir('Perfil')">Perfil</button>
+        <nav class="navHome">
+            <div>
+                <button onclick="ir('Home')"> <i class="bi bi-house"></i> Inicio</button>
+                <button onclick="ir('Billetera')"><i class="bi bi-cash"></i> Billetera</button>
+                <button onclick="ir('Mapa')"><i class="bi bi-globe-americas-fill"></i> Mapa</button>
+            </div>
+
+            <p>MoneyExChange</p>
+
+            <button id="btnPerfil" onclick="ir('Perfil')"> <i class="bi bi-person"></i> Perfil</button>
         </nav>
     </header>
+    <hr>
     <!----------------------MAIN--------------------------->
-    <main>
-        <button onclick="ir('Convertidor')">Convertidor</button>
+    <main class="mainHome">
+        <section class="sectionHome">
+            
+            <div class="sectionSide">
+                <h1 class="typing">Change money never been so easy!</h1>
+                <p style="color: #F7F6F3;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br/> Sint voluptate ea deleniti quo maxime aspernatur ex natus exercitationem, <br/> omnis reiciendis? Distinctio dolorum voluptatibus animi doloribus vero tempore quas officia sint!</p>
+                <button style="color: #F7F6F3;" id="convertidor" onclick="ir('Convertidor')">Convertidor</button>
+            </div>
+            <img class="imgHome" src="../Assets/homeImagen.jpg" alt="homeImagen">
+        </section>
+        
     </main>
     <!----------------------PIE DE PAGINA--------------------------->
     <footer>
-
+        <h2>Logo</h2>
+        <div class="socialMedias">
+            <i class="bi bi-twitter-x"></i>
+            <i class="bi bi-youtube"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-facebook"></i>
+        </div>
     </footer>
     
 
