@@ -18,8 +18,8 @@ p{color: #98a089 ;}
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20px;
-    height: 20vh;   
+    padding: 0px;
+    height: 10vh;   
 }
 
 .navHome div button{
