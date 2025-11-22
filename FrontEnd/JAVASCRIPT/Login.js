@@ -10,3 +10,9 @@ btnIzquierdo.addEventListener("click", () => {
 btnDerecho.addEventListener("click", () => {
     contenedor.classList.remove("movDerecho");
 });
+
+const close = document.getElementById("Close");
+
+close.addEventListener("click", () => {
+    window.location.href = "../HTML/Perfil.html";
+});
