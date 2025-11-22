@@ -15,9 +15,9 @@
     <header>
         <nav class="navHome">
             <div>
-                <button onclick="ir('Home')">Inicio</button>
-                <button onclick="ir('Billetera')">Billetera</button>
-                <button onclick="ir('Mapa')">Mapa</button>
+                <button onclick="ir('Home')"> <i class="bi bi-house"></i> Inicio</button>
+                <button onclick="ir('Billetera')"><i class="bi bi-cash"></i> Billetera</button>
+                <button onclick="ir('Mapa')"><i class="bi bi-globe-americas-fill"></i> Mapa</button>
             </div>
 
             <p>MoneyExChange</p>
@@ -26,8 +26,55 @@
         </nav>
     </header>
     <!----------------------MAIN--------------------------->
+    <hr>
     <main>
-        <h1>Billtera</h1>
+        <section class="balanceTotal">
+            <div class="totalBalance">
+                <h2>$ 5,000.00 USD</h2>
+                <p>Balance Total</p>
+            </div>
+
+            <div class="botonesBalance">
+                <div class="btnsBalance">
+                    <button id="btnCambiarMoneda" class="btnCambiarMoneda"><i class="bi bi-plus-lg"></i> Cambiar Moneda</button>
+                    <button id="btnRegistrarGastos" class="btnRegistrarGastos"><i class="bi bi-dash-lg"></i> Registrar Gasto</button>
+                </div>
+            </div>
+                
+        </section>
+
+
+        <section class="Movimientos">
+            <h2 style="margin-left: 20px ;">Movimientos Recientes</h2>
+            <table>
+                <tr class="titulos">
+                    <th>Fecha</th>
+                    <th>Descripción</th>
+                    <th>Monto</th>
+                    <th>Moneda</th>
+                </tr>
+                <tr>
+                    <td>2024-06-01</td>
+                    <td>Compra en Amazon</td>
+                    <td>-150.00</td>
+                    <td>USD</td>
+                </tr>
+                <tr>
+                    <td>2024-05-28</td>
+                    <td>Venta de Bitcoin</td>
+                    <td>-300.00</td>
+                    <td>USD</td>
+                </tr>
+                <tr>
+                    <td>2024-05-25</td>
+                    <td>Pago de Servicios</td>
+                    <td>-75.00</td>
+                    <td>USD</td>
+                </tr>
+            </table>
+
+            
+        </section>
 
     </main>
     <!----------------------PIE DE PAGINA--------------------------->
