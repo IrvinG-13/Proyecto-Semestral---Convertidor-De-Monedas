@@ -1,0 +1,26 @@
+﻿using System.Text.Json.Serialization;
+
+namespace ProjectMoneyExchange.Models
+{
+    public class ModeloBilletera
+    {
+
+        public int ID_Movimiento { get; set; }
+        public decimal Monto { get; set; }
+        public string Categoria { get; set; }
+        public string RegistroMoneda { get; set; }
+        public string TipoMovimiento { get; set; }
+        public DateTime FechaRegistro { get; set; }
+
+
+        public string Correo_User { get; set; } //LLave Foranea que viene de tabla USUARIO
+        [JsonIgnore]
+
+        public virtual ModeloUsuario ModeloUsuario { get; set; } //Propiedad de navegacion que nos permite conectar entre modelos // lado de muchos
+
+
+
+
+    }
+
+}

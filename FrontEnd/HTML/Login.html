@@ -32,25 +32,34 @@
             <span class="subtitle">Ingrese sus datos.</span>
 
             <label>Correo:</label>
-            <input type="email" placeholder="ElisaIntensaCharlotteOses@gmail.com" />
+            <input id="email" type="email" placeholder="ElisaIntensaCharlotteOses@gmail.com" />
 
             <label>Contraseña:</label>
-            <input type="password" placeholder="Ingrese su contraseña..." />
+            <input id="password" type="password" placeholder="Ingrese su contraseña..." />
 
-            <button id="btnLogin" class="btn">Iniciar Sesion</button>
+            <button  id="btnLogin" class="btn">Iniciar Sesion</button>
+
+            <div id="info" class="info"></div>
         </div>
 
         <!-- registro -->
         <div class="formCont hidden" id="registerForm">
             <h2 class="title">Crear Cuenta</h2>
+            
+            <label >Nombre:</label>
+            <input id="nameCreate" type="text" required placeholder="Ingrese su nombre..." />
+
+            <label > Apellido:</label>
+            <input id="lastnameCreate" type="text" required placeholder="Ingrese su apellido..." />
 
             <label>Correo:</label>
-            <input type="email" placeholder="ElisaIntensaCharlotteOses@gmail.com" />
+            <input id="emailCreate" type="email" placeholder="ElisaIntensaCharlotteOses@gmail.com" />
 
             <label>Contraseña:</label>
-            <input type="password" placeholder="Ingrese su contraseña..." />
+            <input id="passwordCreate" type="password" placeholder="Ingrese su contraseña..." />
 
             <button id="btnCrear" class="btn">Crear</button>
+            <div id="infoCreate" class="info"></div>
         </div>
 
         <!-- circulo -->
@@ -58,8 +67,12 @@
         <button id="Close"><i class="bi bi-x-circle"></i></button>
 
     </div>
+         <script src="../JAVASCRIPT/AuthService.js"></script>
 
-    <script src="../JAVASCRIPT/Home.js"></script>
+     <script src="../JAVASCRIPT/Home.js"></script> 
+
     <script src="../JAVASCRIPT/Login.js"></script>
+    <script src="../JAVASCRIPT/SignIn.js"></script>
+    <script src="../JAVASCRIPT/SignUp.js"></script>
 </body>
 </html>

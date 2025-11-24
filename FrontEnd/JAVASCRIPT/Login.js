@@ -14,5 +14,5 @@ btnDerecho.addEventListener("click", () => {
 const close = document.getElementById("Close");
 
 close.addEventListener("click", () => {
-    window.location.href = "../HTML/Perfil.html";
+    window.location.href = "../HTML/home.html";
 });
