@@ -23,8 +23,8 @@ main {
 /*-----------------------------------------------------BalanceTotal (Billetera)---------------------------------*/ 
 .balanceTotal{
     display: flex;
-    gap: 600px;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -33,12 +33,10 @@ main {
 
 .btnCambiarMoneda, .btnRegistrarGastos{
     
-    padding: 20px;
+    padding: 10px;
     font-size: 15px;
+    border-radius: 12px;
     background-color: transparent;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 50px;
     border: solid 2px #6e6d6d;
     color: #6e6d6d;
     transition: all ease 0.3s;
@@ -46,10 +44,11 @@ main {
 
 .btnCambiarMoneda:hover, .btnRegistrarGastos:hover{
     background-color: #98a089;
-    padding: 18px;
+    padding: 12px;
     color: white;
     transition: 0.3s;
 }
+
 /*-----------------------------------------------------Movimientos (Billetera)---------------------------------*/ 
 .Movimientos{
     display: flex;
@@ -91,4 +90,76 @@ th, td {
 table td:nth-child(3) {
     color: #D27A7A;
 }
+
+/* ========= MODAL ========= */
+.modal{
+  display:none;                    /* oculto por defecto */
+  position:fixed;
+  inset:0;                         /* top/right/bottom/left:0 */
+  background:rgba(0,0,0,.5);
+  justify-content:center;
+  align-items:center;
+  z-index: 9999;                   /* por encima del header/nav */
+}
+
+/* Estado visible (opcional si prefieres con clase en vez de style.display) */
+.modal.is-open{
+  display:flex;
+}
+
+/* Contenedor del diálogo */
+.modalContenido{
+  position:absolute;               /* centra por si falla el flex */
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  background:#fff;
+  width: 90%;
+  max-width: 360px;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+  animation: fadeIn .25s ease;
+}
+
+.cerrarModal{
+  position:absolute;
+  top:8px;
+  right:12px;
+  font-size:24px;
+  font-weight:700;
+  cursor:pointer;
+  color:#444;
+}
+
+.modalContenido input,
+.modalContenido select{
+  width:100%;
+  padding:10px;
+  margin-bottom:14px;
+  border:1px solid #aaa;
+  border-radius:6px;
+}
+
+.btnEnviar{
+  width:100%;
+  padding:12px;
+  border:none;
+  background:#93A267;
+  color:#fff;
+  border-radius:6px;
+  font-size:16px;
+  cursor:pointer;
+}
+.btnEnviar:hover{ background:#7c8c55; }
+
+@keyframes fadeIn{
+  from{ transform:translate(-50%,-46%); opacity:0; }
+  to{ transform:translate(-50%,-50%); opacity:1; }
+}
+
+/* Bloquear scroll del body cuando el modal esté abierto */
+body.modal-open{ overflow:hidden; }
+
+
 

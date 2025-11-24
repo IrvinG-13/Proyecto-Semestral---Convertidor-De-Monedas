@@ -45,36 +45,40 @@
                 </div>
             </div>
 
-            <!-- Form oculto por defecto -->
-            <div id="registroGasto" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5);">
-                <div style="background:#fff; margin:10% auto; padding:40px; width:300px; border-radius:10px; position:relative;">
-                    <span id="cerrarModal" style="position:absolute; top:5px; right:10px; cursor:pointer; font-weight:bold;"></span>
-                    
-                    <h3>Registrar Gasto</h3> <br>
+           <!-- Formulario de Registro de Gasto (Modal) -->
+            <div id="registroGasto" class="modal">
+                <div class="modalContenido">
+
+                    <span id="cerrarModal" class="cerrarModal">&times;</span>
+
+                    <h3>Registrar Gasto</h3>
+
                     <form id="formularioGasto">
-                    <label">Monto</label>
-                    <input type="number" id="monto" name="monto" required><br><br>
 
-                    <label >Categoria</label>
-                    <input type="text" id="categoria" required><br><br>
-                    
-                    <label >Tipo de Moneda</label>
-                    <input type="text" id="registroMoneda" name="registroMoneda" required><br><br>
+                        <label for="monto">Monto</label>
+                        <input type="number" id="monto" name="monto" required>
 
-                    <label>Tipo de Movimiento</label>
-                    <select name="TipoMovimiento" id="tipoMovimiento" required>
-                        <option value="" selected disabled> --Seleccione una opcion --</option>
-                        <option value="">GASTO</option>
-                        <option value="">INGRESO</option>
-                    </select><br><br>
+                        <label for="categoria">Categoría</label>
+                        <input type="text" id="categoria" name="categoria" required>
 
-                    <div id="status"></div>
-                    
-                    <button type="submit">Enviar</button>
+                        <label for="registroMoneda">Tipo de Moneda</label>
+                        <input type="text" id="registroMoneda" name="registroMoneda" required>
+
+                        <label for="tipoMovimiento">Tipo de Movimiento</label>
+                        <select id="tipoMovimiento" name="tipoMovimiento" required>
+                            <option value="" selected disabled>-- Seleccione una opción --</option>
+                            <option value="GASTO">GASTO</option>
+                            <option value="INGRESO">INGRESO</option>
+                        </select>
+
+                        <div id="status"></div>
+
+                        <button type="submit" class="btnEnviar">Enviar</button>
                     </form>
+
                 </div>
             </div>
-                
+
         </section>
 
 
@@ -88,7 +92,9 @@
         </section>
 
     </main>
+
     <!----------------------PIE DE PAGINA--------------------------->
+
     <footer>
         <h2>Logo</h2>
         <div class="socialMedias">
@@ -98,14 +104,10 @@
             <i class="bi bi-facebook"></i>
         </div>
     </footer>
-    
 
-    <!--JAVASCRIPT
-
-    -->
+    <!------------------------------JAVASCRIPT----------------------->
     <script src="../JAVASCRIPT/AuthService.js"></script>
-
-            <script src="../JAVASCRIPT/Home.js"></script>
+    <script src="../JAVASCRIPT/Home.js"></script>
     <script src="../JAVASCRIPT/LastMovs.js"></script>
 </body>
 </html>
