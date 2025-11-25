@@ -16,6 +16,7 @@ document.getElementById('btnLogin').addEventListener('click', async function(e) 
                     infoDiv.innerHTML = `<p>✅ Sesion Iniciada:</p>`;
                     window.location.href = "home.html"; // se puede colocar un delay aqui si se desea
                     localStorage.setItem("isLogged", "True");
+                    
                 } else {
                     document.getElementById('info').innerHTML = 
                         `<p>❌ Usuario no encontrado</p>`;

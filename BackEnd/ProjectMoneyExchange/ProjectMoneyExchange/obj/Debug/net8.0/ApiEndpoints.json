@@ -2,14 +2,14 @@
   {
     "ContainingType": "ProjectMoneyExchange.Controllers.BilleteraController",
     "Method": "GetUltimosMovimientos",
-    "RelativePath": "api/Billetera/usuarios/{idUsuario}/movimientos",
+    "RelativePath": "api/Billetera/usuarios/{idBilletera}/movimientos",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "idUsuario",
-        "Type": "System.String",
+        "Name": "idBilletera",
+        "Type": "System.Int32",
         "IsRequired": true
       },
       {
@@ -23,14 +23,14 @@
   {
     "ContainingType": "ProjectMoneyExchange.Controllers.BilleteraController",
     "Method": "AgregarMovimiento",
-    "RelativePath": "api/Billetera/usuarios/{idUsuario}/movimientos",
+    "RelativePath": "api/Billetera/usuarios/{idBilletera}/movimientos",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "idUsuario",
-        "Type": "System.String",
+        "Name": "idBilletera",
+        "Type": "System.Int32",
         "IsRequired": true
       },
       {
@@ -40,6 +40,78 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectMoneyExchange.Controllers.SaldoBilleteraController",
+    "Method": "UpsertSaldo",
+    "RelativePath": "api/SaldoBilletera/upsert-saldo/{correoUsuario}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "correoUsuario",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "tipoMovimiento",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "request",
+        "Type": "ProjectMoneyExchange.Models.ModelosAPIS.APIActualizarSaldo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProjectMoneyExchange.Controllers.SaldoBilleteraController",
+    "Method": "verSaldo",
+    "RelativePath": "api/SaldoBilletera/verSaldo/{correoUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "correoUsuario",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
   },
   {
     "ContainingType": "ProjectMoneyExchange.Controllers.UsuarioController",

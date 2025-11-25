@@ -16,6 +16,8 @@ namespace ProjectMoneyExchange.Data
         public required DbSet<ModeloBilletera> modeloBilleteras { get; set; }
         public required DbSet<ModeloUsuario> modeloUsuarios { get; set; }
 
+        public required DbSet<ModeloSaldoBilletera> modeloSaldoBilletera { get; set; }
+
         
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -58,7 +60,7 @@ namespace ProjectMoneyExchange.Data
                 entity.Property(e => e.ID_Movimiento).ValueGeneratedOnAdd();
 
                 //Llave Foranea relacionada con la Collection
-                entity.HasOne(e => e.ModeloUsuario).WithMany(u => u.Movimientos).HasForeignKey(e => e.Correo_User).OnDelete(DeleteBehavior.Restrict); //WithMany: muchas FK
+                entity.HasOne(e => e.ModeloSaldoBilletera).WithMany(u => u.ModeloBilletera).HasForeignKey(e => e.ID_Billetera).OnDelete(DeleteBehavior.Restrict); //WithMany: muchas FK
 
                 // Configuracion de la fecha
                 entity.Property(e => e.FechaRegistro).HasDefaultValueSql("GETDATE()").ValueGeneratedOnAdd();
@@ -73,6 +75,36 @@ namespace ProjectMoneyExchange.Data
                 entity.Property(e => e.RegistroMoneda).HasMaxLength(10);// EUR,USD,YEN,COP.
 
             });
+
+
+            /////////////////////////////////////////
+            /////  CREACION DE TABLA BILLETERA
+            /////////////////////////////////////////
+
+            modelBuilder.Entity<ModeloSaldoBilletera>(entity =>
+            {
+                //Nombre de la tabla BILLETERA
+                entity.ToTable("BILLETERA");
+
+                //Llave primaria
+                entity.HasKey(e => e.ID_Billetera);
+
+                //Configuracion de la llave primaria que se genera automaticamente
+                entity.Property(e => e.ID_Billetera).ValueGeneratedOnAdd();
+
+                //Configuracion de propiedades requeridas
+                entity.Property(e => e.Saldo_Disponible).IsRequired().HasColumnType("decimal(18,2)");
+
+                entity.Property(e => e.MonedaActual).IsRequired().HasMaxLength(3);
+
+                //Llave foranea 
+                entity.HasOne(e => e.ModeloUsuario).WithOne(u => u.ModeloSaldoBilletera).HasForeignKey<ModeloSaldoBilletera>(e => e.Correo_User).OnDelete(DeleteBehavior.Restrict);
+
+                
+
+
+            });
+
         }
     }
 }

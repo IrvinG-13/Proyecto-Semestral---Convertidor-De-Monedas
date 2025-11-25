@@ -64,14 +64,27 @@ namespace ProjectMoneyExchange.Controllers
                 };
 
                 _context.modeloUsuarios.Add(usuario);
+
+                //Creacion de billetera automaticamente al registrarse
+                var billetera = new ModeloSaldoBilletera
+                {
+                    Correo_User = request.Correo_User,
+                    Saldo_Disponible = 0, // Saldo inicial
+                    MonedaActual = "USD" // Moneda por defecto
+                };
+                _context.modeloSaldoBilletera.Add(billetera);
+
                 await _context.SaveChangesAsync();
+
 
                 return Ok(new APILoginResponse
                 {
                     Mensaje = "Usuario registrado exitosamente",
                     Correo_User = usuario.Correo_User,
-                    Nombre_User = usuario.Nombre_User
-                });
+                    Nombre_User = usuario.Nombre_User,                    
+                }) ;
+
+                return Ok(new ModeloSaldoBilletera { ID_Billetera = billetera.ID_Billetera });
 
             } catch (Exception ex) 
             {
@@ -108,6 +121,7 @@ namespace ProjectMoneyExchange.Controllers
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult> Login([FromBody] APILoginRequest request)
         {
+
             if (string.IsNullOrWhiteSpace(request.Correo_User) || string.IsNullOrWhiteSpace(request.Contraseña_User))
             {
                 return BadRequest(new { mensaje = "Correo y contraseña son requeridos" });
@@ -124,11 +138,28 @@ namespace ProjectMoneyExchange.Controllers
                     return Unauthorized(new { mensaje = "email o contraseña incorrectos" });
                 }
 
+                //buscar la billetera asociada al usuario
+                var billetera = await _context.modeloSaldoBilletera
+                .FirstOrDefaultAsync(b => b.Correo_User == usuario.Correo_User);
+                // Si no existe billetera, crear una (por seguridad) aunque ya se crean al registrar usuario
+                if (billetera == null)
+                {
+                    billetera = new ModeloSaldoBilletera
+                    {
+                        Correo_User = usuario.Correo_User,
+                        Saldo_Disponible = 0,
+                        MonedaActual = "USD"
+                    };
+                    _context.modeloSaldoBilletera.Add(billetera);
+                    await _context.SaveChangesAsync();
+                }
+
                 return Ok(new APILoginResponse
                 {
                     Mensaje = "login exitoso",
                     Correo_User = usuario.Correo_User,
-                    Nombre_User = usuario.Nombre_User
+                    Nombre_User = usuario.Nombre_User,
+                    ID_Billetera = billetera.ID_Billetera // aqui le mandamos el IDBilletera al iniciar sesion
 
                 });
             }

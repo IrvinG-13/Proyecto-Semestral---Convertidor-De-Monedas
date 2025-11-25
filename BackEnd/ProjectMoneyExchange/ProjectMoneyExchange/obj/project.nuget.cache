@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nJ/vGGjzclI=",
+  "dgSpecHash": "rE6aJw9rOZI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Smith\\Documents\\Software VS\\ProjectMoneyExchange\\ProjectMoneyExchange\\ProjectMoneyExchange.csproj",
+  "projectFilePath": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\ProjectMoneyExchange.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Smith\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Smith\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

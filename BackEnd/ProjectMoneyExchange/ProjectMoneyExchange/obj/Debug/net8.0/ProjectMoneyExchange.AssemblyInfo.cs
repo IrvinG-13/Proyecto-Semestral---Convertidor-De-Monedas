@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectMoneyExchange")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f6baa2314b96a4ce8e81d597c6bfbd193b071098")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectMoneyExchange")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectMoneyExchange")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

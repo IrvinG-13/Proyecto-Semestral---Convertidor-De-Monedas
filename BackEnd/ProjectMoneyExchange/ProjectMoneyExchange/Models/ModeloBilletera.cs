@@ -13,10 +13,12 @@ namespace ProjectMoneyExchange.Models
         public DateTime FechaRegistro { get; set; }
 
 
-        public string Correo_User { get; set; } //LLave Foranea que viene de tabla USUARIO
+        public int ID_Billetera { get; set; } //LLave Foranea que viene de tabla BILLETERA
         [JsonIgnore]
 
-        public virtual ModeloUsuario ModeloUsuario { get; set; } //Propiedad de navegacion que nos permite conectar entre modelos // lado de muchos
+        public virtual ModeloSaldoBilletera ModeloSaldoBilletera { get; set; } //Propiedad de navegacion que nos permite conectar entre modelos // lado de muchos
+
+
 
 
 

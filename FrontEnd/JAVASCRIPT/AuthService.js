@@ -9,9 +9,11 @@ class AuthService {
 
             if (respuesta.ok) {
                 const usuario = await respuesta.json();
+                console.log(usuario)
                 
                 // 🔥 MANTENER tu código que ya funciona
-                sessionStorage.setItem("Correo_user", correo_user);
+                sessionStorage.setItem("Correo_user", usuario.iD_Billetera.toString());
+                sessionStorage.setItem("correo",usuario.correo_User.toString() );
                 localStorage.setItem("isLogged", "True");
                 
                 return { success: true, user: usuario };

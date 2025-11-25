@@ -12,7 +12,9 @@ namespace ProjectMoneyExchange.Models
         public string Contraseña_User { get; set; }
 
         [JsonIgnore]
-        public virtual ICollection<ModeloBilletera> Movimientos { get; set; } // lado de uno
+        
+        // conexion con saldoBilletera
+        public virtual ModeloSaldoBilletera ModeloSaldoBilletera { get; set; }
 
     }
 }

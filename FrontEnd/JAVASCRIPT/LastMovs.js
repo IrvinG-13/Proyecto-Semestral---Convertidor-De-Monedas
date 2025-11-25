@@ -1,4 +1,42 @@
+            // CORREO DEL USUARIO NECESARIO PARA VARIOS ENDPOINTS   
+            const id = sessionStorage.getItem("Correo_user"); // esto realmente es el id de billetera
+            const correo_user = sessionStorage.getItem("correo");
+            console.log("correo usuario::",correo_user);
+
+
+           
+           //////////////////////////////////////////////////
+            //   VER SALDO Y MONEDA ACTUAL
+            ///////////////////////////////////////////////////// 
+            const URL_VerSaldo = `https://localhost:7149/api/SaldoBilletera/verSaldo/${correo_user}` ;
+            async function verSaldoDisponible(){
+            var divSaldoDisponible = document.getElementById("saldoDisponible");
+
+            try{
+                const res = await fetch(URL_VerSaldo,{
+                    method: 'GET',
+                    headers: {'Content-Type': 'application/json'}
+                });
+
+                console.log(res);
+                const datos = await res.json();
+                divSaldoDisponible.innerHTML = "$"+ datos.saldo_disponible.toFixed(2) + " " + datos.moneda_actual
+
+            }
+            catch(error)
+            {
+                divSaldoDisponible.innerHTML = 
+                    `<p>Error al cargar Saldo</p>`;
+            }
             
+
+
+
+           }
+           verSaldoDisponible();
+
+
+
             //////////////////////////////////////////////////
             //   BOTON CAMBIAR MONEDA
             /////////////////////////////////////////////////////
@@ -14,7 +52,7 @@
 
                 monedas.forEach(moneda =>{
                     const option1 = document.createElement("option");
-                    
+
                     option1.value = moneda;
                     option1.textContent= moneda;
 
@@ -29,8 +67,7 @@
             ///////////////////////////////////////////////////////////////////////
             //   VER MOVIMIENTOS RECIENTES 
             ///////////////////////////////////////////////////////////////////////
-            const id = sessionStorage.getItem("Correo_user");
-            console.log("Correo del usuario:", id);
+            console.log("ID de Billetera:", id);
             const URL = `https://localhost:7149/api/Billetera/usuarios/${id}/movimientos?cantidad=10`;
             var div = document.getElementById('movimientosRecientes');
 

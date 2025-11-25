@@ -142,11 +142,11 @@ namespace ProjectMoneyExchange.Controllers
         //
         //VER MOVIMIENTOS DE LA PERSONA
         //
-        [HttpGet("usuarios/{idUsuario}/movimientos")]
-        public async Task<IActionResult> GetUltimosMovimientos(string idUsuario, [FromQuery] int cantidad = 10)
+        [HttpGet("usuarios/{idBilletera}/movimientos")]
+        public async Task<IActionResult> GetUltimosMovimientos(int idBilletera, [FromQuery] int cantidad = 10)
         {
             var movimientos = await _context.modeloBilleteras
-            .Where(m=> m.Correo_User == idUsuario)
+            .Where(m=> m.ID_Billetera == idBilletera)
             .OrderByDescending(f => f.FechaRegistro)
             .Take(cantidad)
             .Select(m => new APIVerMovimientos
@@ -167,24 +167,24 @@ namespace ProjectMoneyExchange.Controllers
         //
         //AGREGAR MOVIMIENTO
         //
-        [HttpPost("usuarios/{idUsuario}/movimientos")]
-        public async Task<IActionResult> AgregarMovimiento(string idUsuario, [FromBody] APIRegistrarMovimientos movimiento)
+        [HttpPost("usuarios/{idBilletera}/movimientos")]
+        public async Task<IActionResult> AgregarMovimiento(int idBilletera, [FromBody] APIRegistrarMovimientos movimiento)
         {
 
             try
             {// Verificar que el usuario existe
-                var usuarioExiste = await _context.modeloUsuarios.AnyAsync(u => u.Correo_User == idUsuario);
-                if (!usuarioExiste)
-                    return BadRequest("No se encuentran movimientos para su usuario");
+                var billeteraExiste = await _context.modeloSaldoBilletera.AnyAsync(u => u.ID_Billetera == idBilletera);
+                if (!billeteraExiste)
+                    return BadRequest("No se encuentran movimientos para su billetera");
 
                 var movimientosCargados = new ModeloBilletera
                 {
                     Monto = movimiento.Monto,
-                    Categoria = movimiento.Categoria,
+                    Categoria = movimiento.Categoria.ToUpper(),
                     RegistroMoneda = movimiento.RegistroMoneda,
                     TipoMovimiento = movimiento.TipoMovimiento,
                     FechaRegistro = DateTime.Now,
-                    Correo_User = idUsuario
+                    ID_Billetera = idBilletera
                 };
 
                 //guardamos
