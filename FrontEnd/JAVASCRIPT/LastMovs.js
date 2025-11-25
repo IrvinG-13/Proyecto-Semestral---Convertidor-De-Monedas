@@ -2,9 +2,9 @@
             const id = sessionStorage.getItem("Correo_user"); // esto realmente es el id de billetera
             const correo_user = sessionStorage.getItem("correo");
             console.log("correo usuario::",correo_user);
+            console.log(sessionStorage.getItem("Nombre_User"));
+            console.log(sessionStorage.getItem("Apellido_User"));
 
-
-           
            //////////////////////////////////////////////////
             //   VER SALDO Y MONEDA ACTUAL
             ///////////////////////////////////////////////////// 

@@ -159,6 +159,7 @@ namespace ProjectMoneyExchange.Controllers
                     Mensaje = "login exitoso",
                     Correo_User = usuario.Correo_User,
                     Nombre_User = usuario.Nombre_User,
+                    Apellido_User = usuario.Apellido_User,
                     ID_Billetera = billetera.ID_Billetera // aqui le mandamos el IDBilletera al iniciar sesion
 
                 });

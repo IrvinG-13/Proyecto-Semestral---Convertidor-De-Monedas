@@ -14,6 +14,8 @@ class AuthService {
                 // 🔥 MANTENER tu código que ya funciona
                 sessionStorage.setItem("Correo_user", usuario.iD_Billetera.toString());
                 sessionStorage.setItem("correo",usuario.correo_User.toString() );
+                sessionStorage.setItem("Nombre_User", usuario.nombre_User.toString());
+                sessionStorage.setItem("Apellido_User", usuario.apellido_User.toString());
                 localStorage.setItem("isLogged", "True");
                 
                 return { success: true, user: usuario };
