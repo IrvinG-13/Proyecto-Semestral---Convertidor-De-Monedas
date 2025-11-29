@@ -24,6 +24,8 @@ let nombre = elisa
 //Esto es para que te abra a la pgian del login y registro, si no etas logueado
 //console.log(localStorage.removeItem("isLogged"))
 
+
+//Funcion para cerrar sesion
 function cerrarSesion() {
   AuthService.logout();
 }

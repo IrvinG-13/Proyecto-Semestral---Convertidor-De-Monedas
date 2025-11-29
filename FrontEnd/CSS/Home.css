@@ -107,7 +107,7 @@ p{color: #98a089 ;}
 .typing {
   white-space: nowrap;           
   overflow: hidden;   
-  font-size: 36px;           
+  font-size: 32px;           
   border-right: 2px solid rgb(255, 255, 255); 
   font-family: monospace;
   animation: typing 8s steps(33) infinite, blink 0.5s step-end infinite alternate;

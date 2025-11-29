@@ -1,0 +1,33 @@
+.contenedorPerfil{
+    display: flex;
+    background-color: rgb(230, 228, 228);
+    padding: 100px;
+    align-items: center;
+    /*justify-items: center;*/
+    justify-content: center;
+    margin: 50px;
+    margin-left: 40vh; margin-right: 40vh;
+    border-radius: 40px;
+    gap: 20vh;
+}
+
+.campoPerfil{
+    background-color: aliceblue;
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.correo{
+    width: 300px;
+}
+
+.datosPerfil{
+    margin-right: 5vh;
+}
+
+.bi-person-circle{
+    font-size: 200px;
+    margin-left: 5vh;
+}

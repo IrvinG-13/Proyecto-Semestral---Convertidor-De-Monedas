@@ -9,32 +9,60 @@
     <link rel="stylesheet" href="../CSS/Home.css">
     <!--Iconos-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+     <style>
+    #map {
+      height: 80vh;
+      width: 80%;
+      margin: auto;
+      border: 20px solid black  ;
+    }
+    #search-box {
+      /*position:fixed; */
+      
+      width: 320px;
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 40px;
+    }
+
+     </style>
 </head>
 <body>
     <!----------------------ENCABEZADO--------------------------->
     <header>
         <nav class="navHome">
             <div>
-                <button onclick="ir('Home')">Inicio</button>
-                <button onclick="ir('Billetera')">Billetera</button>
-                <button onclick="ir('Mapa')">Mapa</button>
+                <button onclick="ir('Home')"> <i class="bi bi-house"></i> Inicio</button>
+                <button onclick="ir('Billetera')"><i class="bi bi-cash"></i> Billetera</button>
+                <button onclick="ir('Mapa')"><i class="bi bi-globe-americas-fill"></i> Mapa</button>
             </div>
 
             <p>MoneyExChange</p>
 
-            <div class="opcionesUsuario">
-                <button id="btnPerfil" onclick="ir('Perfil')"> <i class="bi bi-person"></i> Perfil</button>
-                <button id="btnCerrarSesion"> <i class="bi bi-house"> Cerrar Sesión</i>  </button>
-            </div>
+            <button id="btnPerfil" onclick="ir('perfil')" > <i class="bi bi-person"></i> Perfil</button>
+           <!-- <button id="btnCerrarSesion" onclick="cerrarSesion()"> <i class="bi bi-house"> Cerrar Sesión</i>  </button> --> 
             
 
         </nav>
     </header>
+
+    <hr>
     <!----------------------MAIN--------------------------->
     <main>
-        <h1>Mapa</h1>
+        <h1 style="color: black;">Mapa interactivo</h1>
 
-        <h2>mapa</h2>
+          <input id="search-box" type="text" placeholder="Ej: gasolineras ciudad de mexico"/>
+
+
+        <div id="map"></div>
+
     </main>
     <!----------------------PIE DE PAGINA--------------------------->
     <footer>
@@ -45,10 +73,18 @@
             <i class="bi bi-instagram"></i>
             <i class="bi bi-facebook"></i>
         </div>
+
     </footer>
     
 
     <!--JAVASCRIPT-->
     <script src="../JAVASCRIPT/Home.js"></script>
+    <script src="../JAVASCRIPT/mapa.js"></script>
+    <!-- Cargar Google Maps + Places (IMPORTANTE: sustituye TU_API_KEY) -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHcmJHAuvVGxti8qXbxvzZDACmxd9a8hM&libraries=places&callback=initMap"
+    async
+    defer>
+  </script>
 </body>
 </html>
