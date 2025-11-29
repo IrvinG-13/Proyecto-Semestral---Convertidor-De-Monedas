@@ -1,0 +1,241 @@
+/*Configuracion general*/
+
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Reset para todos los elementos*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*el padding y el borde se incluye en el ancho y alto toal del elemento*/
+    font-family: "Monserrat", sans-serif; /*Establece la fuente principal*/
+}
+
+body{
+    min-height: 100vh; /* Hace que el cuerpo ocupe */
+    display: flex;
+    flex-direction: column;
+}
+
+h1{color: #F7F6F3;}
+p{color: #98a089;}
+
+/*Navegacion*/
+
+header{
+    width: 100%; /*ocupa todo el ancho disponible*/
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/*Clase navHome (Contenedro principal)*/
+
+.navHome{
+    display: flex;
+    justify-content: space-between; /*coloca los elemntos hijos en el eje principal y colocanco un espacio entre ellos*/
+    align-items: center;
+    padding: 0 40px;
+    height: 80px;
+    max-width: 1200px; /*Anchro para centrear el contenido*/
+    margin: 0 auto; /*centra el contenedor en la pagina*/
+}
+
+/*Estilo para los botones de la izquierda*/
+
+.navHome div button{
+    padding: 10px 12px;
+    font-size: 16px;
+    background-color: transparent;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    border: none;
+    color: #444;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-flex; /* ahbilita el flexbox para alinear el icono y el texto*/
+    align-items: center;
+    gap: 5px; /*espacio entre icono y texto*/
+}
+
+.navHome div button:hover{
+    background-color: #98a089;
+    color: white;
+}
+
+/*Estilo para el logo central*/
+
+.navHome p{
+    font-size: 20px;
+    color: #9aaec2;
+    flex-grow: 1; /* Hace que ocupe el espacio disponible y empueja los botones para los lados*/
+    text-align: center;
+}
+
+/*Contenedor  de Perfil y Cerrar Sesion*/
+
+.opcionesUsuario{
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+/*Estilo para cerrar sesion*/
+
+#btnCerrarSesion{
+    padding: 10px;
+    font-size: 16px;
+    background-color: transparent;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    border: none;
+    transition: all ease 0.3s;
+}
+
+#btnCerrarSesion:hover{
+    background-color: #98a089;
+    color: white;
+}
+
+#btnPerfil{
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+#btnPerfil:hover{
+    background-color: #98a089;
+    color: white;
+    border: 1px solid #98a089;
+    box-shadow: none;
+}
+
+.bi-person{
+    font-size: 16px;
+}
+
+/*Tarjeta Perfil*/
+main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #f0f0f0;
+}
+
+/*Tarjeta Perfil*/
+.tarjeta-perfil{
+    background-color: white;
+    width: 100%;
+    max-width: 1000px;
+    padding: 60px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/*Avatar*/
+.seccion-avatar{
+    flex-basis: 40%; /* Hace que ocupe el 40% de la de la tarjeta*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Circulo que contiene el avatar*/
+.circulo-avatar{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    overflow: hidden; /*oculta cualquier parte de la imagen que se slaga del circulo*/
+    background-color: #fff;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Imagen dentro del circulo*/
+.circulo-avatar img{
+    width: auto;
+    height: 100%;
+    object-fit: cover; /* hace que la imagen cubra todo el area sin distorsionarse*/
+    min-width: 100%;
+    min-height: 100%;
+    transform: scale(1.05); /* Agranda un poco la imagen para que no se le vean los bordes*/
+}
+
+/*Formularios*/
+.seccion-formulario{
+    flex-basis: 60%; /*ocupa el 60% de la tarjeta*/
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.envoltura-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.envoltura-input label{
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.envoltura-input input{
+    background-color: #cfd4da;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #333;
+    outline: none; /*Elimina el borde al hacer click*/
+}
+
+/*Boton de editar*/
+.boton-editar{
+    margin-top: 15px;
+    align-self: flex-start;
+    padding: 8px 30px;
+    background-color: transparent;
+    border: 1px solid #555;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.boton-editar:hover{
+    background-color: #333;
+    color: white;
+}
+
+/*Footer*/
+footer{
+    background-color: #d5ddc6;
+    height: 160px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socialMedias{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
