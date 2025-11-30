@@ -3,53 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Convertidor De Monedas</title>
+    <title>Home</title>
     <!--CSS-->
     <link rel="stylesheet" href="../CSS/Home.css">
     <!--Iconos-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
+    <!----------------------BANNER SUPERIOR--------------------------->
+    <div class="bannersuperior">
+        <div class="logo">
+            <img  src="../Assets/MoneyExchange.png" alt="Logo">
+        </div>
+        <h1>Money Exchange</h1>
+        <div class="busqueda">
+            <a href="https://www.google.com" target="_blank" class="barra-busqueda">
+            <span>Buscar...</span>
+            <i class="bi bi-search"></i>
+            </a>
+        </div>
+        <div class="redes">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter-x"></i>
+            <i class="bi bi-instagram"></i>
+        </div>
+    </div>
+
     <!----------------------ENCABEZADO--------------------------->
     <header>
         <nav class="navHome">
-            <div>
-                <button onclick="ir('Home')"> <i class="bi bi-house"></i> Inicio</button>
-                <button onclick="ir('Billetera')"><i class="bi bi-cash"></i> Billetera</button>
-                <button onclick="ir('Mapa')"><i class="bi bi-globe-americas-fill"></i> Mapa</button>
-                <button onclick="ir('Nosotros')"><i class="bi bi-people-fill"></i>Nosotros</button>
-            </div>
-
-            <p>MoneyExChange</p>
-
+                <a href="Home.html" class="navActivo">Inicio</a>
+                <a href="Billetera.html" class="navNo">Billetera</a>
+                <a href="Mapa.html" class="navNo">Mapa</a>
+                <a href="Nosotros.html" class="navNo">Nosotros</a>
+            
+        <!----------------------Cosas que arreglar--------------------------->
             <button id="btnPerfil"> <i class="bi bi-person"></i> Perfil</button>
-           <!-- <button id="btnCerrarSesion" onclick="cerrarSesion()"> <i class="bi bi-house"> Cerrar Sesión</i>  </button> --> 
+            <button id="btnCerrarSesion"> <i class="bi bi-house"> Cerrar Sesión</i>  </button>
         </nav>
     </header>
-    <hr>
     <!----------------------MAIN--------------------------->
-    <main class="mainHome">
-        <section class="sectionHome">
-            
-            <div class="sectionSide">
-                <h1 class="typing">Changing money has never been so easier!</h1>
-                <p style="color: #F7F6F3;">En MoneyExChange reunimos toda la información que necesitas para cambiar divisas de forma inteligente. <br/>  Compara tipos de cambio en tiempo real, <br/>                  descubre las mejores casas de cambio cerca de ti y conoce todos los tips para ahorrar al máximo.
-</p>
-                <button style="color: #F7F6F3;" id="convertidor" onclick="ir('Convertidor')">Convertidor</button>
-            </div>
-            <img class="imgHome" src="../Assets/homeImagen.jpg" alt="homeImagen">
+    <main>
+        <section class="fondo">
+            <h2>Bienvenido a Money Exchange</h2>
+            <p>Convierte monedas rapidamentre y gestiona tus gastos. </p>
+            <br>
+            <button onclick="location.href='Convertidor.html'" class="btnConvertidor">
+            Convertidor
+            </button>
         </section>
-        
+        <br>
+        <h1 id="h1abajo"> Noticias sobre el mundo</h1>
+        <h2 id="h2abajo">Noticias tanto internacionales o nacionales.</h2>
+        <section class="contenedor-cartas">
+        <div class="Carta">
+        <img src="../Assets/Esterlina.jpeg" alt="Moneda">
+        <div class="Contenido">
+            <h2>La libra esterlina se desploma</h2>
+            <p>La libra esterlina cayó a un mínimo histórico...</p>
+            <a href="https://cnnespanol.cnn.com/2022/09/26/libra-esterlina-desploma-minimos-historicos-dolar-trax" class="btnCarta">Ver más</a>
+        </div>
+       </div>
+        <div class="Carta">
+        <img src="../Assets/Bitcoin.jpg" alt="Moneda">
+        <div class="Contenido">
+            <h2>Las criptomonedas caen</h2>
+            <p>El bitcoin se desploma y aumnetan los temores en el mercado...</p>
+            <a href="https://cnnespanol.cnn.com/2025/11/18/economia/desplome-criptomonedas-acciones-mercado-trax" class="btnCarta">Ver más</a>
+        </div>
+       </div>
+           <!-----------Video--------------->
+        <div class="Carta Video">
+            <div class="Cuadro video">
+                <!-----------Para videos de Youtube--------------->
+                <iframe src="https://www.youtube.com/embed/SLmxE8EDbT4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="Contenido">
+           <h2>¿Cuáles son los pros y contras de dolarizar la economía?</h2>
+            </div>
+       </div>
+</section>
+
     </main>
     <!----------------------PIE DE PAGINA--------------------------->
     <footer>
-        <h2>Logo</h2>
-        <div class="socialMedias">
-            <i class="bi bi-twitter-x"></i>
-            <i class="bi bi-youtube"></i>
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-facebook"></i>
+        <div class="footer-logo">
+            <img src="../Assets/MoneyExchange.png" alt="Logo">
+            <p>Money Exchange -- Gestion y conversión de monedas.</p>
         </div>
+        <p class="copy">© 2025 Money Exchange — Todos los derechos reservados.</p>
     </footer>
     
 

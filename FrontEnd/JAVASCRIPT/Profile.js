@@ -6,7 +6,10 @@ const divnombrePerfil= document.getElementById("nombrePerfil");
 const divapellidoPerfil = document.getElementById("apellidoPerfil");
 const divcorreoPerfil = document.getElementById("correoPerfil");
 
+console.log(nombrePerfil);
 
-divnombrePerfil.innerHTML=nombrePerfil;
-divapellidoPerfil.innerHTML =apellidoPerfil;
-divcorreoPerfil.innerHTML=correoPerfil;
+
+
+divnombrePerfil.value=nombrePerfil;
+divapellidoPerfil.value =apellidoPerfil;
+divcorreoPerfil.value=correoPerfil;

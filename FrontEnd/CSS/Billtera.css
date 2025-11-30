@@ -161,5 +161,21 @@ table td:nth-child(3) {
 /* Bloquear scroll del body cuando el modal esté abierto */
 body.modal-open{ overflow:hidden; }
 
+/*-----------------------------------------------------Grid Movimientos (Billetera)---------------------------------*/ 
+.gridMov{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    font-weight: bold;
+    margin: 20px;
+    padding: 12px;
+    background-color: #93A267;
+}
+
+.gridMov p{
+    color: #fff;
+}
 
 
+.monto--gasto   { color: #c0392b; }   /* rojo */
+.monto--ingreso { color: #27ae60; }   /* verde */
