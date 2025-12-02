@@ -74,6 +74,10 @@ namespace ProjectMoneyExchange.Data
 
                 entity.Property(e => e.RegistroMoneda).HasMaxLength(10);// EUR,USD,YEN,COP.
 
+                entity.Property(e => e.RegistroSaldo).IsRequired().HasColumnType("decimal(18,2)");
+
+                entity.Property(e=> e.NewRegistroMoneda).HasMaxLength(10);// EUR,USD pero del saldo nuevo
+
             });
 
 

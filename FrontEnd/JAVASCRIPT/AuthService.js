@@ -11,7 +11,7 @@ class AuthService {
                 const usuario = await respuesta.json();
                 console.log(usuario)
                 
-                // 🔥 MANTENER tu código que ya funciona
+                // SE GUARDAN VALORES EN SESSION STORAGE Y LOCAL STORAGE
                 sessionStorage.setItem("Correo_user", usuario.iD_Billetera.toString());
                 sessionStorage.setItem("correo",usuario.correo_User.toString() );
                 sessionStorage.setItem("Nombre_User", usuario.nombre_User.toString());

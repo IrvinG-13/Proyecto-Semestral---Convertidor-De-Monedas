@@ -156,6 +156,8 @@ namespace ProjectMoneyExchange.Controllers
                 Monto = m.Monto,
                 RegistroMoneda = m.RegistroMoneda,
                 TipoMovimiento=m.TipoMovimiento,
+                RegistroSaldo= m.RegistroSaldo,
+                NewRegistroMoneda = m.NewRegistroMoneda,
                 FechaRegistro = m.FechaRegistro
 
             }) .ToListAsync();                   
@@ -183,6 +185,8 @@ namespace ProjectMoneyExchange.Controllers
                     Categoria = movimiento.Categoria.ToUpper(),
                     RegistroMoneda = movimiento.RegistroMoneda,
                     TipoMovimiento = movimiento.TipoMovimiento,
+                    RegistroSaldo = movimiento.RegistroSaldo,
+                    NewRegistroMoneda = movimiento.NewRegistroMoneda,
                     FechaRegistro = DateTime.Now,
                     ID_Billetera = idBilletera
                 };
@@ -198,7 +202,8 @@ namespace ProjectMoneyExchange.Controllers
                     monto = movimientosCargados.Monto,
                     categoria = movimientosCargados.Categoria,
                     RegistroMoneda = movimientosCargados.RegistroMoneda,
-                    tipoMovimiento = movimientosCargados.TipoMovimiento
+                    tipoMovimiento = movimientosCargados.TipoMovimiento,
+                    RegistroSaldo = movimientosCargados.RegistroSaldo
                 });
             }catch(Exception ex) 
             {

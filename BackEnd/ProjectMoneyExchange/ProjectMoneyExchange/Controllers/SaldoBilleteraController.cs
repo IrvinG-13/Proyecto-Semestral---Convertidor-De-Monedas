@@ -47,59 +47,70 @@ namespace ProjectMoneyExchange.Controllers
             if (request.Saldo_Disponible <= 0)
             {
                 return BadRequest("El monto debe ser mayor a 0");
-
             }
 
-            if(request.Moneda_Actual.Length > 3 )
+            // Validación 4: Moneda no más de 3 caracteres
+            if (request.Moneda_Actual != null && request.Moneda_Actual.Length > 3)
             {
-                return BadRequest("El Nombre de la moneda no debe superar 3 Letras");
+                return BadRequest("El nombre de la moneda no debe superar 3 letras");
             }
 
+            // Usar else if para manejar todos los casos correctamente
             if (tipoMovimiento.ToUpper() == "INGRESO")
             {
-                
-                // Validación 4: Para ingresos, verificar que no exceda límites (opcional)
-                decimal saldoMaximoPermitido = 1000000; // Ejemplo: máximo 1 millón
+                // Validación: Para ingresos, verificar que no exceda límites
+                decimal saldoMaximoPermitido = 1000000;
                 if (billetera.Saldo_Disponible + request.Saldo_Disponible > saldoMaximoPermitido)
                 {
-                    return BadRequest($"El saldo no puede exceder ${saldoMaximoPermitido:N2}"); //N2 = NUMBER FORMAT, 2 DECIMALES
+                    return BadRequest($"El saldo no puede exceder ${saldoMaximoPermitido:N2}");
                 }
 
                 billetera.Saldo_Disponible += request.Saldo_Disponible;
-                
-                //valida que el campo de moneda, si esta vacio se queda la misma
-                if(request.Moneda_Actual == "") { billetera.MonedaActual = billetera.MonedaActual; }
-                else { billetera.MonedaActual = request.Moneda_Actual; }
+
+                // Actualizar moneda si se proporciona
+                if (!string.IsNullOrEmpty(request.Moneda_Actual))
+                {
+                    billetera.MonedaActual = request.Moneda_Actual;
+                }
             }
             else if (tipoMovimiento.ToUpper() == "GASTO")
             {
-                // **VALIDACIÓN PRINCIPAL: Verificar saldo suficiente**
+                // Validación: Verificar saldo suficiente
                 if (billetera.Saldo_Disponible < request.Saldo_Disponible)
                 {
                     return BadRequest($"Saldo insuficiente. Saldo actual: ${billetera.Saldo_Disponible:N2}, Intentaste retirar: ${request.Saldo_Disponible:N2}");
                 }
 
-                // Validación adicional: No permitir que quede en negativo después de la operación
-                if (billetera.Saldo_Disponible - request.Saldo_Disponible < 0)
-                {
-                    return BadRequest("La operación dejaría el saldo en negativo");
-                }
-
                 billetera.Saldo_Disponible -= request.Saldo_Disponible;
 
-                //valida que el campo de moneda, si esta vacio se queda la misma
-                if (request.Moneda_Actual == "") { billetera.MonedaActual = billetera.MonedaActual; }
-                else { billetera.MonedaActual = request.Moneda_Actual; }
+                // Actualizar moneda si se proporciona
+                if (!string.IsNullOrEmpty(request.Moneda_Actual))
+                {
+                    billetera.MonedaActual = request.Moneda_Actual;
+                }
+            }
+            else if (tipoMovimiento.ToUpper() == "CAMBIO")
+            {
+                // Para cambio: Solo actualiza el saldo y moneda
+                billetera.Saldo_Disponible = request.Saldo_Disponible;
+
+                // Para CAMBIO, la moneda SIEMPRE debe proporcionarse
+                if (string.IsNullOrEmpty(request.Moneda_Actual))
+                {
+                    return BadRequest("Para cambio de moneda debe especificar la nueva moneda");
+                }
+
+                billetera.MonedaActual = request.Moneda_Actual;
             }
             else
             {
-                return BadRequest("Tipo de movimiento no válido. Use 'INGRESO' o 'GASTO'");
+                // Mensaje actualizado con todas las opciones
+                return BadRequest("Tipo de movimiento no válido. Use 'INGRESO', 'GASTO' o 'CAMBIO'");
             }
 
             await _context.SaveChangesAsync();
             return Ok(billetera);
         }
-
 
 
         [HttpGet("verSaldo/{correoUsuario}")]

@@ -12,8 +12,8 @@ using ProjectMoneyExchange.Data;
 namespace ProjectMoneyExchange.Migrations
 {
     [DbContext(typeof(AplicacionDbContext))]
-    [Migration("20251122181316_inicialCreacion")]
-    partial class inicialCreacion
+    [Migration("20251202000839_AgregarNuevaColumnav.2")]
+    partial class AgregarNuevaColumnav2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,22 +38,29 @@ namespace ProjectMoneyExchange.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("Correo_User")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(50)");
-
                     b.Property<DateTime>("FechaRegistro")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETDATE()");
 
+                    b.Property<int>("ID_Billetera")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("Monto")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("NewRegistroMoneda")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("RegistroMoneda")
                         .IsRequired()
                         .HasMaxLength(10)
                         .HasColumnType("nvarchar(10)");
+
+                    b.Property<decimal>("RegistroSaldo")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("TipoMovimiento")
                         .IsRequired()
@@ -62,9 +69,37 @@ namespace ProjectMoneyExchange.Migrations
 
                     b.HasKey("ID_Movimiento");
 
-                    b.HasIndex("Correo_User");
+                    b.HasIndex("ID_Billetera");
 
                     b.ToTable("MOVIMIENTO", (string)null);
+                });
+
+            modelBuilder.Entity("ProjectMoneyExchange.Models.ModeloSaldoBilletera", b =>
+                {
+                    b.Property<int>("ID_Billetera")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID_Billetera"));
+
+                    b.Property<string>("Correo_User")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("MonedaActual")
+                        .IsRequired()
+                        .HasMaxLength(3)
+                        .HasColumnType("nvarchar(3)");
+
+                    b.Property<decimal>("Saldo_Disponible")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("ID_Billetera");
+
+                    b.HasIndex("Correo_User")
+                        .IsUnique();
+
+                    b.ToTable("BILLETERA", (string)null);
                 });
 
             modelBuilder.Entity("ProjectMoneyExchange.Models.ModeloUsuario", b =>
@@ -95,18 +130,35 @@ namespace ProjectMoneyExchange.Migrations
 
             modelBuilder.Entity("ProjectMoneyExchange.Models.ModeloBilletera", b =>
                 {
+                    b.HasOne("ProjectMoneyExchange.Models.ModeloSaldoBilletera", "ModeloSaldoBilletera")
+                        .WithMany("ModeloBilletera")
+                        .HasForeignKey("ID_Billetera")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("ModeloSaldoBilletera");
+                });
+
+            modelBuilder.Entity("ProjectMoneyExchange.Models.ModeloSaldoBilletera", b =>
+                {
                     b.HasOne("ProjectMoneyExchange.Models.ModeloUsuario", "ModeloUsuario")
-                        .WithMany("Movimientos")
-                        .HasForeignKey("Correo_User")
+                        .WithOne("ModeloSaldoBilletera")
+                        .HasForeignKey("ProjectMoneyExchange.Models.ModeloSaldoBilletera", "Correo_User")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("ModeloUsuario");
                 });
 
+            modelBuilder.Entity("ProjectMoneyExchange.Models.ModeloSaldoBilletera", b =>
+                {
+                    b.Navigation("ModeloBilletera");
+                });
+
             modelBuilder.Entity("ProjectMoneyExchange.Models.ModeloUsuario", b =>
                 {
-                    b.Navigation("Movimientos");
+                    b.Navigation("ModeloSaldoBilletera")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

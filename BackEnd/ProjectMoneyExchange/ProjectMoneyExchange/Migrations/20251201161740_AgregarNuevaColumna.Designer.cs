@@ -12,8 +12,8 @@ using ProjectMoneyExchange.Data;
 namespace ProjectMoneyExchange.Migrations
 {
     [DbContext(typeof(AplicacionDbContext))]
-    [Migration("20251124235714_creacionfinal")]
-    partial class creacionfinal
+    [Migration("20251201161740_AgregarNuevaColumna")]
+    partial class AgregarNuevaColumna
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,6 +53,9 @@ namespace ProjectMoneyExchange.Migrations
                         .IsRequired()
                         .HasMaxLength(10)
                         .HasColumnType("nvarchar(10)");
+
+                    b.Property<decimal>("RegistroSaldo")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("TipoMovimiento")
                         .IsRequired()

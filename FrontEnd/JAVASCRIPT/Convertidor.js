@@ -27,7 +27,7 @@ async function convertir() {
     let monto = document.getElementById('monto').value;
 
     // Quitar solo puntos (separadores de miles)
-    monto = monto.replace(/\./g, '');
+    //monto = monto.replace(/\./g, '');
 
     const from = document.getElementById('moneda1').value;
     const to = document.getElementById('moneda2').value;
