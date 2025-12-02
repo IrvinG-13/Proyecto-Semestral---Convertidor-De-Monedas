@@ -11,25 +11,53 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
+    <!----------------------BANNER SUPERIOR--------------------------->
+
     <!----------------------ENCABEZADO--------------------------->
     <header>
-        <nav class="navHome">
-            <div>
-                <button onclick="ir('Home')"> <i class="bi bi-house"></i> Inicio</button>
-                <button onclick="ir('Billetera')"><i class="bi bi-cash"></i> Billetera</button>
-                <button onclick="ir('Mapa')"><i class="bi bi-globe-americas-fill"></i> Mapa</button>
+        <div class="banner">
+            <div class="contLogo">
+                <img class="logo" src="../Assets/MoneyExchange.png" alt="">
+                <h1>Money ExChange</h1>
             </div>
-
-            <p>MoneyExChange</p>
-
-            <button id="btnPerfil" onclick="ir('perfil')" > <i class="bi bi-person"></i> Perfil</button>
-            <button id="btnCerrarSesion" onclick="cerrarSesion()"> <i class="bi bi-house"> Cerrar Sesión</i>  </button>
-
+            <div class="buscadorYRedes">
+                <div class="buscador">
+                    <input placeholder="Buscar..." type="text">
+                    <i class="bi bi-search"></i>
+                </div>
+                <div class="redes">
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a> 
+                </div>
+                
+            </div>
+        </div>  
+        
+        <nav class="navHome">
+                <a href="Home.html" class="navActivo">Inicio</a>
+                <a href="Billetera.html" class="navNo">Billetera</a>
+                <a href="Mapa.html" class="navNo">Mapa</a>
+                <a href="Nosotros.html" class="navNo">Nosotros</a>
+                <a href="Perfil.html" class="navNo" id="btnPerfil">Perfil</a>
         </nav>
+        <!-- Botón Hamburguesa (solo móvil) -->
+        <button id="btnHamburger" class="hamburger-btn">
+            <i class="bi bi-list"></i>
+        </button>
+
+<!-- Menú móvil oculto -->
+<div id="mobileMenu" class="mobile-menu">
+    <a href="Home.html">Inicio</a>
+    <a href="Billetera.html">Billetera</a>
+    <a href="Mapa.html">Mapa</a>
+    <a href="Nosotros.html">Nosotros</a>
+    <a href="Perfil.html">Perfil</a>
+</div>
+
     </header>
     <!----------------------MAIN--------------------------->
-    <hr>
-    <main>
+    <main class="mainBilletera">
         <section class="balanceTotal">
             <div class="totalBalance">
                 <div id="saldoDisponible"></div>
@@ -37,14 +65,16 @@
                 <p>Balance Total</p>
             </div>
 
-            <div class="botonesBalance">
-                <div class="btnsBalance">
-                    <select id="btnCambiarMoneda" class="btnCambiarMoneda"><i class="bi bi-plus-lg"></i> 
-                        <option value="null" selected disabled> Cambiar moneda</option>
-                    </select>
-                    <button id="btnRegistrarGastos" class="btnRegistrarGastos"><i class="bi bi-dash-lg"></i> Registrar Gasto</button>
-                </div>
+           <div class="btnsBalance">
+                <select id="btnCambiarMoneda" class="btnCambiarMoneda">
+                    <option value="null" selected disabled>Cambiar moneda</option>
+                </select>
+
+                <button id="btnRegistrarGastos" class="btnRegistrarGastos">
+                    Registrar Gasto
+                </button>
             </div>
+
 
            <!-- Formulario de Registro de Gasto (Modal) -->
             <div id="registroGasto" class="modal">

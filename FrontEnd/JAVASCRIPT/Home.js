@@ -34,3 +34,5 @@ function cerrarSesion() {
 
 //Pon esto si estas logueado
 //localStorage.setItem("isLogged", "True");
+
+

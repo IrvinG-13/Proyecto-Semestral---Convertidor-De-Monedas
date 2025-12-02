@@ -11,28 +11,39 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
+    <!----------------------BANNER SUPERIOR--------------------------->
+
     <!----------------------ENCABEZADO--------------------------->
     <header>
+        <div class="banner">
+            <div class="contLogo">
+                <img class="logo" src="../Assets/MoneyExchange.png" alt="">
+                <h1>Money ExChange</h1>
+            </div>
+            <div class="buscadorYRedes">
+                <div class="buscador">
+                    <input placeholder="Buscar..." type="text">
+                    <i class="bi bi-search"></i>
+                </div>
+                <div class="redes">
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a> 
+                </div>
+                
+            </div>
+        </div>
+        
         <nav class="navHome">
-            <div>
-                <button onclick="ir('Home')">Inicio</button>
-                <button onclick="ir('Billetera')">Billetera</button>
-                <button onclick="ir('Mapa')">Mapa</button>
-                <button onclick="ir('Nosotros')">Nosotros</button>
-            </div>
-
-            <p>MoneyExChange</p>
-
-            <div class="opcionesUsuario">
-                <button id="btnPerfil" onclick="ir('Perfil')"> <i class="bi bi-person"></i> Perfil</button>
-           <!-- <button id="btnCerrarSesion" onclick="cerrarSesion()"> <i class="bi bi-house"> Cerrar Sesión</i>  </button> --> 
-            </div>
-            
+                <a href="Home.html" class="navActivo">Inicio</a>
+                <a href="Billetera.html" class="navNo">Billetera</a>
+                <a href="Mapa.html" class="navNo">Mapa</a>
+                <a href="Nosotros.html" class="navNo">Nosotros</a>
+                <a href="Perfil.html" class="navNo" id="btnPerfil">Perfil</a>
         </nav>
     </header>
     <!----------------------MAIN--------------------------->
     <main>
-        <h2>Nosotros</h2>
         <h2>Nosotros</h2>
         <section>
         <!--Persona#1-->

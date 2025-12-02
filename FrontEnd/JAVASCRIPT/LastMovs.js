@@ -263,7 +263,7 @@ async function obtenerMovimientos() {
 
             // ⭐ Mostramos solo la FECHA pero ordenamos usando fecha completa
             filas.push(`
-                <div style="display:grid;
+                <div class="movim" style="display:grid;
                             grid-template-columns:repeat(5,1fr);
                             gap:10px;
                             font-weight:bold;
@@ -393,3 +393,15 @@ async function iniciarPagina() {
 }
 
 iniciarPagina()
+
+//menu hamburguesa
+const btnHamburger = document.getElementById("btnHamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+btnHamburger.addEventListener("click", () => {
+    if (mobileMenu.style.display === "flex") {
+        mobileMenu.style.display = "none";
+    } else {
+        mobileMenu.style.display = "flex";
+    }
+});

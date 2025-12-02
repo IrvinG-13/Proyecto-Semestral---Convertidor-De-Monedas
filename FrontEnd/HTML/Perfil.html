@@ -5,26 +5,39 @@
         <meta name = "viewport" content="width=device-width, initial-scale=1.0">
         <title> Proyecto Convertidor de Monedas</title>
         <link rel = "stylesheet" href="../CSS/Perfil.css">
+        <link rel="stylesheet" href="../CSS/Home.css">
         <link rel = "stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     </head>
     <body>
-        <header>
-            <nav class = "navHome">
-                <div>
-                    <button onclick = "ir('Home')"><i class="bi bi-house"></i>Inicio</button>
-                    <button onclick = "ir('Billetera')"><i class="bi bi-cash"></i>Billetera</button>
-                    <button onclick = "ir('Mapa')"><i class="bi bi-globe-americas-fill"></i>Mapa</button>
-                    <button onclick = "ir('Nosotros')"><i class="bi bi-people-fill"></i>Nosotros</button>
+    <!----------------------ENCABEZADO--------------------------->
+    <header>
+        <div class="banner">
+            <div class="contLogo">
+                <img class="logo" src="../Assets/MoneyExchange.png" alt="">
+                <h1>Money ExChange</h1>
+            </div>
+            <div class="buscadorYRedes">
+                <div class="buscador">
+                    <input placeholder="Buscar..." type="text">
+                    <i class="bi bi-search"></i>
                 </div>
-
-                <p>MoneyExChange</p>
-
-                <div class="opcionesUsuario">
-                    <button id="btnPerfil"> <i class="bi bi-person"></i>Perfil</button>
-                    <button id="btnCerrarSesion"> <i class="bi bi-house"> Cerrar Sesión</i> </button>
+                <div class="redes">
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a> 
                 </div>
-            </nav>
-        </header>
+                
+            </div>
+        </div>
+        
+        <nav class="navHome">
+                <a href="Home.html" class="navActivo">Inicio</a>
+                <a href="Billetera.html" class="navNo">Billetera</a>
+                <a href="Mapa.html" class="navNo">Mapa</a>
+                <a href="Nosotros.html" class="navNo">Nosotros</a>
+                <a href="Perfil.html" class="navNo" id="btnPerfil">Perfil</a>
+        </nav>
+    </header>
         <main>
             <div class="tarjeta-perfil">
                 <div class="seccion-avatar">
