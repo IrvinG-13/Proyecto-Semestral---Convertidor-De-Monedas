@@ -338,6 +338,14 @@
           "tipoMovimiento": {
             "type": "string",
             "nullable": true
+          },
+          "registroSaldo": {
+            "type": "number",
+            "format": "double"
+          },
+          "newRegistroMoneda": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

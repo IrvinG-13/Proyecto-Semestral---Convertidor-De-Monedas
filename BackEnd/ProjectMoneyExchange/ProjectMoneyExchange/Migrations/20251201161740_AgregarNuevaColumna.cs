@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ProjectMoneyExchange.Migrations
 {
     /// <inheritdoc />
-    public partial class inicialCreacion : Migration
+    public partial class AgregarNuevaColumna : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -26,6 +26,27 @@ namespace ProjectMoneyExchange.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "BILLETERA",
+                columns: table => new
+                {
+                    ID_Billetera = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Saldo_Disponible = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    MonedaActual = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false),
+                    Correo_User = table.Column<string>(type: "nvarchar(50)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BILLETERA", x => x.ID_Billetera);
+                    table.ForeignKey(
+                        name: "FK_BILLETERA_USUARIO_Correo_User",
+                        column: x => x.Correo_User,
+                        principalTable: "USUARIO",
+                        principalColumn: "Correo_User",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "MOVIMIENTO",
                 columns: table => new
                 {
@@ -35,24 +56,31 @@ namespace ProjectMoneyExchange.Migrations
                     Categoria = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     RegistroMoneda = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     TipoMovimiento = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    RegistroSaldo = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     FechaRegistro = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETDATE()"),
-                    Correo_User = table.Column<string>(type: "nvarchar(50)", nullable: false)
+                    ID_Billetera = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_MOVIMIENTO", x => x.ID_Movimiento);
                     table.ForeignKey(
-                        name: "FK_MOVIMIENTO_USUARIO_Correo_User",
-                        column: x => x.Correo_User,
-                        principalTable: "USUARIO",
-                        principalColumn: "Correo_User",
+                        name: "FK_MOVIMIENTO_BILLETERA_ID_Billetera",
+                        column: x => x.ID_Billetera,
+                        principalTable: "BILLETERA",
+                        principalColumn: "ID_Billetera",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_MOVIMIENTO_Correo_User",
+                name: "IX_BILLETERA_Correo_User",
+                table: "BILLETERA",
+                column: "Correo_User",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MOVIMIENTO_ID_Billetera",
                 table: "MOVIMIENTO",
-                column: "Correo_User");
+                column: "ID_Billetera");
         }
 
         /// <inheritdoc />
@@ -60,6 +88,9 @@ namespace ProjectMoneyExchange.Migrations
         {
             migrationBuilder.DropTable(
                 name: "MOVIMIENTO");
+
+            migrationBuilder.DropTable(
+                name: "BILLETERA");
 
             migrationBuilder.DropTable(
                 name: "USUARIO");

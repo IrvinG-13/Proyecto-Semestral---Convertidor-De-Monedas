@@ -46,10 +46,18 @@ namespace ProjectMoneyExchange.Migrations
                     b.Property<decimal>("Monto")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("NewRegistroMoneda")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
                     b.Property<string>("RegistroMoneda")
                         .IsRequired()
                         .HasMaxLength(10)
                         .HasColumnType("nvarchar(10)");
+
+                    b.Property<decimal>("RegistroSaldo")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("TipoMovimiento")
                         .IsRequired()
