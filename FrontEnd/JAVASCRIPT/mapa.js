@@ -1,11 +1,7 @@
-// mapa.js - versión extendida partiendo de tu archivo original
-// Conservé tu estructura y comentarios originales y añadí mejoras optativas:
 // - Autolocalización (si el usuario lo permite)
 // - Selector de país y centrado (si existen los elementos en el DOM)
 // - Búsqueda de "casas de cambio" / bancos cercanos (NearbySearch)
 // - Direcciones (DirectionsService + DirectionsRenderer) con botón "Cómo llegar"
-// - Mantengo la búsqueda por texto que ya tenías (placesService.textSearch al presionar Enter)
-// Nota: este archivo asume que la Google Maps JS API con Places y callback=initMap se carga en el HTML.
 
 let map;
 let placesService;
@@ -19,12 +15,12 @@ let currentPosition = null; // {lat, lng}
 
 // Función original: inicializa el mapa y el manejo del input
 function initMap() {
-  // Centro inicial genérico (puedes cambiarlo)
-  const initialCenter = { lat: 19.4326, lng: -99.1332 }; // Ciudad de México
+  // Centro inicial genérico
+  const initialCenter = { lat: 8.5380, lng: -80.7821 }; // Ciudad de Panama
 
   map = new google.maps.Map(document.getElementById("map"), {
     center: initialCenter,
-    zoom: 6,
+    zoom: 7,
   });
 
   placesService = new google.maps.places.PlacesService(map);
