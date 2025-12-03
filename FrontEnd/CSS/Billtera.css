@@ -1,4 +1,8 @@
 
+header {
+    position: relative;
+    background-color:#C0C2B8;
+}
 
 .mainBilletera{
   min-height: calc(100vh - 250px);
@@ -6,13 +10,47 @@
 }
 /*-----------------------------------------------------BalanceTotal (Billetera)---------------------------------*/ 
 .balanceTotal{
-    display: flex;
-    flex-direction: row;
+    display: top;
+    flex-direction: column;
     justify-content: space-between;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
-    margin: 70px;
+    border-radius: 0 0 20px 20px;
+    background-color: #EBEADF;
+}
+.totalBalance{
+    background-color: #93A267;
+    padding: 25px 30px;
+    color: white;
+    position: relative;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+.wallet-img{
+    position: absolute;
+    right: 30px;
+    top: 30%;
+}
+.wallet-img img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+#saldoDisponible {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.totalBalance p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0.9;
 }
 
 .btnsBalance{

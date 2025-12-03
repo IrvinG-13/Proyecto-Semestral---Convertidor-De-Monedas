@@ -9,12 +9,17 @@
     font-family: "Montserrat", sans-serif;
 }
 
-h1{color: #F7F6F3;}
+h1{color: #F7F6F3;text-align: center}
+h2{color: white; text-align: center}
 
 /*-----------------------------------------------------Header---------------------------------*/
 header{
     height: auto;
-    background-color: #778470;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 .banner{
     display: flex;
@@ -23,7 +28,8 @@ header{
     justify-content: space-between;
     padding: 20px;
     width: 100%;
-    background-color: #778470;
+    background-color: transparent;
+    backdrop-filter: blur(6px);
 }
 
 .contLogo{
@@ -50,19 +56,22 @@ header{
 
 .buscador{
     background-color: white;
-    width: 30%;
-    padding: 5px 5px;
+    width: 60%;
+    padding: 8px 15px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     border-radius: 20px;
 }
 
-.buscador input{
-    border: none;
-    padding: 8px;
-    width: 200px;
-    outline: none;
+.linkBuscar{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 8px;
+    color: #000;
+    width: 100%;
 }
 
 .redes{
@@ -126,6 +135,48 @@ header{
     background: #778470;
     transition: translateY(-2px);
 }
+/*--------Introducción-----------*/
+.intro{
+    background-color: #EBEADF;
+    padding: 70px 0;
+}
+.intro-contenedor{
+    max-width: 1220px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap:40px;
+    padding: 0 40px;
+}
+.intro-text h2{
+    font-size: 50px;
+    text-align: left;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color:#000;
+}
+.intro-text p{
+    font-size: 18px;
+    text-align: left;
+    color: #000;
+    margin-bottom: 25px;
+}
+.intro-img {
+    width: 100%;
+    height: 360px;
+    overflow: hidden; /* Para que se salga */
+    border-radius: 6px;
+}
+
+.intro-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorte */
+    display: block;
+}
+
 
 /*--------Noticias-----------*/
 .contenedor-cartas{
@@ -138,7 +189,7 @@ header{
 }
 
 .Carta{
-    background: #334934;
+    background-color:#EBEADF;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 6px 16px rgba(0,0,0,0.15); 
@@ -152,20 +203,31 @@ header{
 .Contenido{
     padding: 20px;
     text-align: center;
-    color: white;
+    color: black;
 }
+.Contenido h2{
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
 .btnCarta{
     display: inline-block;
     padding: 10px 25px;
-    background: #8b5a39;
-    color: white;
+    background: #bac4a3;
+    border: 1px solid white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     border-radius: 20px;
     margin-top: 10px;
     transition: 0.3s;
 }
 .btnCarta:hover {
-    background: #a56a47;
+    background: #30402E;
+    color: white;
+}
+.noticias{
+background-color:#022615;
 }
 /*--------Video-----------*/
 .Carta.Video{
@@ -184,19 +246,15 @@ header{
     height: 100%;
     border: none;
 }
-#h2abajo,#h1abajo {
-    color: #334934;
-    text-align: center;
-}
-
 /*-----------------------------------------------------Footer---------------------------------*/
 footer{
-    background-color:#d5ddc6;
+    background-color: #022615d7;
     height: 20vh;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: white;
 }
 
 .footer-logo img{
