@@ -1,69 +1,69 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\",
+  "WorkspaceRootPath": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\smith\\documents\\software v\\semestralmoneyexchange\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\models\\modelosapis\\apivermovimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\usurio\\documents\\software 5\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\models\\modelosapis\\apivermovimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|solutionrelative:projectmoneyexchange\\models\\modelosapis\\apivermovimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\smith\\documents\\software v\\semestralmoneyexchange\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\controllers\\billeteracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\usurio\\documents\\software 5\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\controllers\\billeteracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|solutionrelative:projectmoneyexchange\\controllers\\billeteracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\smith\\documents\\software v\\semestralmoneyexchange\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\data\\aplicaciondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\usurio\\documents\\software 5\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\data\\aplicaciondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|solutionrelative:projectmoneyexchange\\data\\aplicaciondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\smith\\documents\\software v\\semestralmoneyexchange\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\models\\modelobilletera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\usurio\\documents\\software 5\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\models\\modelobilletera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|solutionrelative:projectmoneyexchange\\models\\modelobilletera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\smith\\documents\\software v\\semestralmoneyexchange\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\models\\modelosaldobilletera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\usurio\\documents\\software 5\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\models\\modelosaldobilletera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|solutionrelative:projectmoneyexchange\\models\\modelosaldobilletera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\smith\\documents\\software v\\semestralmoneyexchange\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\usurio\\documents\\software 5\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|solutionrelative:projectmoneyexchange\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\smith\\documents\\software v\\semestralmoneyexchange\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\controllers\\saldobilleteracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\usurio\\documents\\software 5\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\controllers\\saldobilleteracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|solutionrelative:projectmoneyexchange\\controllers\\saldobilleteracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\smith\\documents\\software v\\semestralmoneyexchange\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\models\\modelosapis\\apiregistrarmovimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\usurio\\documents\\software 5\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\models\\modelosapis\\apiregistrarmovimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|solutionrelative:projectmoneyexchange\\models\\modelosapis\\apiregistrarmovimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\smith\\documents\\software v\\semestralmoneyexchange\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\models\\modelosapis\\apiactualizarsaldo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\usurio\\documents\\software 5\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\models\\modelosapis\\apiactualizarsaldo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|solutionrelative:projectmoneyexchange\\models\\modelosapis\\apiactualizarsaldo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\smith\\documents\\software v\\semestralmoneyexchange\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\models\\modelousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\usurio\\documents\\software 5\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\models\\modelousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|solutionrelative:projectmoneyexchange\\models\\modelousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\smith\\documents\\software v\\semestralmoneyexchange\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\usurio\\documents\\software 5\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|solutionrelative:projectmoneyexchange\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\smith\\documents\\software v\\semestralmoneyexchange\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\usurio\\documents\\software 5\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|solutionrelative:projectmoneyexchange\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\smith\\documents\\software v\\semestralmoneyexchange\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\models\\modelosapis\\apiloginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\usurio\\documents\\software 5\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\models\\modelosapis\\apiloginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|solutionrelative:projectmoneyexchange\\models\\modelosapis\\apiloginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\smith\\documents\\software v\\semestralmoneyexchange\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\models\\modelosapis\\apiloginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\usurio\\documents\\software 5\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\models\\modelosapis\\apiloginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|solutionrelative:projectmoneyexchange\\models\\modelosapis\\apiloginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\smith\\documents\\software v\\semestralmoneyexchange\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\migrations\\20251202000839_agregarnuevacolumnav.2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\usurio\\documents\\software 5\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\migrations\\20251202000839_agregarnuevacolumnav.2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|solutionrelative:projectmoneyexchange\\migrations\\20251202000839_agregarnuevacolumnav.2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\smith\\documents\\software v\\semestralmoneyexchange\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\migrations\\20251201161740_agregarnuevacolumna.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|c:\\users\\usurio\\documents\\software 5\\proyecto-semestral---convertidor-de-monedas\\backend\\projectmoneyexchange\\projectmoneyexchange\\migrations\\20251201161740_agregarnuevacolumna.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFEB8B18-1FB8-4566-A64C-70915B77E601}|ProjectMoneyExchange\\ProjectMoneyExchange.csproj|solutionrelative:projectmoneyexchange\\migrations\\20251201161740_agregarnuevacolumna.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -74,55 +74,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "20251202000839_AgregarNuevaColumnav.2.cs",
-              "DocumentMoniker": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Migrations\\20251202000839_AgregarNuevaColumnav.2.cs",
+              "DocumentMoniker": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Migrations\\20251202000839_AgregarNuevaColumnav.2.cs",
               "RelativeDocumentMoniker": "ProjectMoneyExchange\\Migrations\\20251202000839_AgregarNuevaColumnav.2.cs",
-              "ToolTip": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Migrations\\20251202000839_AgregarNuevaColumnav.2.cs",
+              "ToolTip": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Migrations\\20251202000839_AgregarNuevaColumnav.2.cs",
               "RelativeToolTip": "ProjectMoneyExchange\\Migrations\\20251202000839_AgregarNuevaColumnav.2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -132,11 +100,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "APIVerMovimientos.cs",
-              "DocumentMoniker": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APIVerMovimientos.cs",
+              "DocumentMoniker": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APIVerMovimientos.cs",
               "RelativeDocumentMoniker": "ProjectMoneyExchange\\Models\\ModelosAPIS\\APIVerMovimientos.cs",
-              "ToolTip": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APIVerMovimientos.cs",
+              "ToolTip": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APIVerMovimientos.cs",
               "RelativeToolTip": "ProjectMoneyExchange\\Models\\ModelosAPIS\\APIVerMovimientos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA2wAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-01T16:28:18.855Z",
               "EditorCaption": ""
@@ -145,9 +113,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "APIRegistrarMovimientos.cs",
-              "DocumentMoniker": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APIRegistrarMovimientos.cs",
+              "DocumentMoniker": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APIRegistrarMovimientos.cs",
               "RelativeDocumentMoniker": "ProjectMoneyExchange\\Models\\ModelosAPIS\\APIRegistrarMovimientos.cs",
-              "ToolTip": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APIRegistrarMovimientos.cs",
+              "ToolTip": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APIRegistrarMovimientos.cs",
               "RelativeToolTip": "ProjectMoneyExchange\\Models\\ModelosAPIS\\APIRegistrarMovimientos.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -157,9 +125,9 @@
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "20251201161740_AgregarNuevaColumna.cs",
-              "DocumentMoniker": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Migrations\\20251201161740_AgregarNuevaColumna.cs",
+              "DocumentMoniker": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Migrations\\20251201161740_AgregarNuevaColumna.cs",
               "RelativeDocumentMoniker": "ProjectMoneyExchange\\Migrations\\20251201161740_AgregarNuevaColumna.cs",
-              "ToolTip": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Migrations\\20251201161740_AgregarNuevaColumna.cs",
+              "ToolTip": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Migrations\\20251201161740_AgregarNuevaColumna.cs",
               "RelativeToolTip": "ProjectMoneyExchange\\Migrations\\20251201161740_AgregarNuevaColumna.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -169,9 +137,9 @@
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\appsettings.json",
               "RelativeDocumentMoniker": "ProjectMoneyExchange\\appsettings.json",
-              "ToolTip": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\appsettings.json",
+              "ToolTip": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\appsettings.json",
               "RelativeToolTip": "ProjectMoneyExchange\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -181,9 +149,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "AplicacionDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Data\\AplicacionDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Data\\AplicacionDbContext.cs",
               "RelativeDocumentMoniker": "ProjectMoneyExchange\\Data\\AplicacionDbContext.cs",
-              "ToolTip": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Data\\AplicacionDbContext.cs",
+              "ToolTip": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Data\\AplicacionDbContext.cs",
               "RelativeToolTip": "ProjectMoneyExchange\\Data\\AplicacionDbContext.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAAAFAAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -193,9 +161,9 @@
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "APILoginRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APILoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APILoginRequest.cs",
               "RelativeDocumentMoniker": "ProjectMoneyExchange\\Models\\ModelosAPIS\\APILoginRequest.cs",
-              "ToolTip": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APILoginRequest.cs",
+              "ToolTip": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APILoginRequest.cs",
               "RelativeToolTip": "ProjectMoneyExchange\\Models\\ModelosAPIS\\APILoginRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -205,9 +173,9 @@
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "APILoginResponse.cs",
-              "DocumentMoniker": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APILoginResponse.cs",
+              "DocumentMoniker": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APILoginResponse.cs",
               "RelativeDocumentMoniker": "ProjectMoneyExchange\\Models\\ModelosAPIS\\APILoginResponse.cs",
-              "ToolTip": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APILoginResponse.cs",
+              "ToolTip": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APILoginResponse.cs",
               "RelativeToolTip": "ProjectMoneyExchange\\Models\\ModelosAPIS\\APILoginResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -217,9 +185,9 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Program.cs",
               "RelativeDocumentMoniker": "ProjectMoneyExchange\\Program.cs",
-              "ToolTip": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Program.cs",
+              "ToolTip": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Program.cs",
               "RelativeToolTip": "ProjectMoneyExchange\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -229,9 +197,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "ModeloUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModeloUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModeloUsuario.cs",
               "RelativeDocumentMoniker": "ProjectMoneyExchange\\Models\\ModeloUsuario.cs",
-              "ToolTip": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModeloUsuario.cs",
+              "ToolTip": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModeloUsuario.cs",
               "RelativeToolTip": "ProjectMoneyExchange\\Models\\ModeloUsuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -241,9 +209,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "ModeloSaldoBilletera.cs",
-              "DocumentMoniker": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModeloSaldoBilletera.cs",
+              "DocumentMoniker": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModeloSaldoBilletera.cs",
               "RelativeDocumentMoniker": "ProjectMoneyExchange\\Models\\ModeloSaldoBilletera.cs",
-              "ToolTip": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModeloSaldoBilletera.cs",
+              "ToolTip": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModeloSaldoBilletera.cs",
               "RelativeToolTip": "ProjectMoneyExchange\\Models\\ModeloSaldoBilletera.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -253,9 +221,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "ModeloBilletera.cs",
-              "DocumentMoniker": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModeloBilletera.cs",
+              "DocumentMoniker": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModeloBilletera.cs",
               "RelativeDocumentMoniker": "ProjectMoneyExchange\\Models\\ModeloBilletera.cs",
-              "ToolTip": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModeloBilletera.cs",
+              "ToolTip": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModeloBilletera.cs",
               "RelativeToolTip": "ProjectMoneyExchange\\Models\\ModeloBilletera.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -265,9 +233,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "APIActualizarSaldo.cs",
-              "DocumentMoniker": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APIActualizarSaldo.cs",
+              "DocumentMoniker": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APIActualizarSaldo.cs",
               "RelativeDocumentMoniker": "ProjectMoneyExchange\\Models\\ModelosAPIS\\APIActualizarSaldo.cs",
-              "ToolTip": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APIActualizarSaldo.cs",
+              "ToolTip": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Models\\ModelosAPIS\\APIActualizarSaldo.cs",
               "RelativeToolTip": "ProjectMoneyExchange\\Models\\ModelosAPIS\\APIActualizarSaldo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -277,9 +245,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Controllers\\UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "ProjectMoneyExchange\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Controllers\\UsuarioController.cs",
               "RelativeToolTip": "ProjectMoneyExchange\\Controllers\\UsuarioController.cs",
               "ViewState": "AgIAAIIAAAAAAAAAAAAgwKQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -289,9 +257,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "SaldoBilleteraController.cs",
-              "DocumentMoniker": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Controllers\\SaldoBilleteraController.cs",
+              "DocumentMoniker": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Controllers\\SaldoBilleteraController.cs",
               "RelativeDocumentMoniker": "ProjectMoneyExchange\\Controllers\\SaldoBilleteraController.cs",
-              "ToolTip": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Controllers\\SaldoBilleteraController.cs",
+              "ToolTip": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Controllers\\SaldoBilleteraController.cs",
               "RelativeToolTip": "ProjectMoneyExchange\\Controllers\\SaldoBilleteraController.cs",
               "ViewState": "AgIAAGIAAAAAAAAAAAAQwHAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -301,9 +269,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "BilleteraController.cs",
-              "DocumentMoniker": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Controllers\\BilleteraController.cs",
+              "DocumentMoniker": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Controllers\\BilleteraController.cs",
               "RelativeDocumentMoniker": "ProjectMoneyExchange\\Controllers\\BilleteraController.cs",
-              "ToolTip": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Controllers\\BilleteraController.cs",
+              "ToolTip": "C:\\Users\\USURIO\\Documents\\Software 5\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\Controllers\\BilleteraController.cs",
               "RelativeToolTip": "ProjectMoneyExchange\\Controllers\\BilleteraController.cs",
               "ViewState": "AgIAAIgAAAAAAAAAAAAQwJ8AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

@@ -137,6 +137,7 @@ async function convertirMoneda(valor, monedaOrigen, monedaDestino) {
  * Obtiene la lista de monedas disponibles desde la API Frankfurter
  * y las carga en los selectores correspondientes
  */
+
 async function obtenerMonedas() {
     const btnCambiarMoneda = document.getElementById("btnCambiarMoneda");
     const registroMonedaSelect = document.getElementById("registroMoneda");
@@ -230,7 +231,7 @@ async function obtenerMovimientos() {
             const clase = esGasto ? "monto--gasto" : "monto--ingreso";
 
             html += `
-                <div style="display:grid;
+                <div class="movim" style="display:grid;
                             grid-template-columns:repeat(5,1fr);
                             gap:10px;
                             font-weight:bold;
@@ -444,3 +445,18 @@ if (document.readyState === 'loading') {
 } else {
     iniciarPagina();
 }
+
+        const btnHamburger = document.getElementById("btnHamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        btnHamburger.addEventListener("click", () => {
+            if (mobileMenu.style.display === "flex") {
+                mobileMenu.style.display = "none";
+            } else {
+                mobileMenu.style.display = "flex";
+            }
+        });
+
+
+
+

@@ -1,14 +1,19 @@
 /*-----------------------------------------------------Configuracion General---------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {font-family: "Kaio";src: url("../Fonts/KaioTRIAL-Regular-BF65f24de206d9d.otf") format("opentype");font-weight: 400;}
+@font-face {font-family: "Kaio";src: url("../Fonts/KaioTRIAL-Medium-BF65f24de1b8279.otf") format("opentype");font-weight: 500;}
+@font-face {font-family: "Kaio";src: url("../Fonts/KaioTRIAL-Bold-BF65f24de19552f.otf") format("opentype");font-weight: 700;}
+@font-face {font-family: "Kaio";src: url("../Fonts/KaioTRIAL-Black-BF65f24de1e055e.otf") format("opentype");font-weight: 800;}
+@font-face {font-family: "Kaio";src: url("../Fonts/KaioTRIAL-Super-BF65f24de1c22c2.otf") format("opentype");font-weight: 900;}
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-}
+*{margin: 0;padding: 0;box-sizing: border-box;  }
 
+h1 {font-family: "Kaio", sans-serif;font-weight: 800;}
+h2 {font-family: "Kaio", sans-serif;font-weight: 700;}
+h3 {font-family: "Kaio", sans-serif;font-weight: 700;}
+p,a {font-family: "Kaio", sans-serif;}
+button{font-family: "Kaio", sans-serif;}
 h1{color: #F7F6F3;}
 
 /*-----------------------------------------------------Header---------------------------------*/
@@ -50,7 +55,7 @@ header{
 
 .buscador{
     background-color: white;
-    width: 30%;
+    width: 40%;
     padding: 5px 5px;
     display: flex;
     align-items: center;
@@ -68,7 +73,7 @@ header{
 .redes{
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 30px;
     width: 25%;
 }
 
@@ -97,7 +102,12 @@ header{
 
 .fondo{
     height: 100vh;
-    background-image: url("../Assets/HomeNueva.jpg");
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(../Assets/HomeNueva.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -113,19 +123,59 @@ header{
     font-size: larger;
 }
 
-.btnConvertidor{
-    background-color:#334934;
-    padding: 8px 15px;
+.typing {
+  white-space: nowrap;           
+  overflow: hidden;              
+  border-right: 2px solid rgb(255, 255, 255); 
+  font-size: 24px;
+  animation: typing 24s steps(24) infinite, blink 0.5s step-end infinite alternate;
+}
+
+/* Animación de escritura y borrado */
+@keyframes typing {
+  0% { width: 0; }             /* empieza vacío */
+  10% { width: 24ch; }         /* escribe todo el texto rápido */
+  80% { width: 24ch; }         /* mantiene visible el texto por mucho tiempo */
+  100% { width: 0; }            /* borra al final, justo antes de reiniciar */
+}
+
+/* Animación del parpadeo */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+.btnConvertidor {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    width: 10%;
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 14px;
+    height: 8%;
     border-radius: 10px;
-    border: 1px solid white;
+    border: 2px solid white;
     color: white;
     cursor: pointer;
+    transition: all 0.3s ease;
+    animation: tiltPulse 3s infinite;
+}
+
+.btnConvertidor:hover{ 
+    background-color: white;
+    color: black;
     transition: 0.3s;
 }
-.btnConvertidor:hover{
-    background: #778470;
-    transition: translateY(-2px);
+
+/* Animación de rebote vertical */
+@keyframes tiltPulse {
+  0%, 80%, 100% { transform: rotate(0deg) scale(1); }
+  82% { transform: rotate(5deg) scale(1.05); }
+  84% { transform: rotate(-5deg) scale(0.95); }
+  86% { transform: rotate(3deg) scale(1.02); }
+  88% { transform: rotate(-3deg) scale(0.98); }
 }
+
 
 /*--------Noticias-----------*/
 .contenedor-cartas{
@@ -192,19 +242,89 @@ header{
 /*-----------------------------------------------------Footer---------------------------------*/
 footer{
     background-color:#d5ddc6;
-    height: 20vh;
-    padding: 20px;
+
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
-.footer-logo img{
+.footer-logo{
     width: 120px;
+    object-fit: cover;
     margin-bottom: 10px;
 }
 .copy{
     margin-top: 20px;
     font-size: 14px;
     opacity: 0.7;
+}
+.informacionFooter{
+    display: flex;
+    padding: 25px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.servicios, .moneyExchange, .informacion{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.servicios p, .moneyExchange p, .informacion p{
+    margin-top: 10px;
+}
+
+.servicios p:hover, .moneyExchange p:hover, .informacion p:hover{
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.logoFooter{
+    margin-top: 25px;
+    padding: 20px;
+}
+
+.footerUnder{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.inputSuscribe{
+    width: 60%;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnSus{
+    background-color: red;
+    backdrop-filter: blur(10px);
+    width: 30%;
+    margin-top: 20px;
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 14px;
+    height: 5%;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnSus:hover{ 
+    transform: scale(1.03); 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35), 0 0 15px rgba(255,255,255,0.2); 
+    border-color: #ffffffaa; 
+    color: #ffffff;
 }
