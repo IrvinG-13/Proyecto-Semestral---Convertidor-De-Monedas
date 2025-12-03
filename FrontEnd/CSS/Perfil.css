@@ -22,9 +22,8 @@ p{color: #98a089;}
 /*Navegacion*/
 
 header{
-    width: 100%; /*ocupa todo el ancho disponible*/
-    background-color: white;
-    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    background-color: #00110B;
 }
 
 /*Clase navHome (Contenedro principal)*/
