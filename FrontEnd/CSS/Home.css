@@ -302,7 +302,6 @@ background-color:#022615;
 /*-----------------------------------------------------Footer---------------------------------*/
 footer{
     background-color: #022615d7;
-    height: 20vh;
     padding: 20px;
     display: flex;
     flex-direction: column;
