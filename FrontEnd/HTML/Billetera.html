@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Convertidor De Monedas</title>
+    <title>Billetera</title>
     <!--CSS-->
-    <link rel="stylesheet" href="../CSS/Billtera.css">
     <link rel="stylesheet" href="../CSS/Home.css">
+    <link rel="stylesheet" href="../CSS/Billtera.css">
     <!--Iconos-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
 
 </head>
 <body>
-    <!----------------------BANNER SUPERIOR--------------------------->
 
     <!----------------------ENCABEZADO--------------------------->
     <header>
+        <div class="fondo-billetera">
         <div class="banner">
             <div class="contLogo">
                 <img class="logo" src="../Assets/MoneyExchange.png" alt="">
@@ -24,7 +24,9 @@
             </div>
             <div class="buscadorYRedes">
                 <div class="buscador">
-                    <input placeholder="Buscar..." type="text">
+                    <a href="https://www.google.com" target="_blank" class="linkBuscar">
+                    <span>Buscar...</span>
+                    </a>
                     <i class="bi bi-search"></i>
                 </div>
                 <div class="redes">
@@ -63,8 +65,10 @@
         <section class="balanceTotal">
             <div class="totalBalance">
                 <div id="saldoDisponible"></div>
-
                 <p>Balance Total</p>
+                <div class="wallet-img">
+                    <img src="../Assets/Wallet.png" alt="Billetera">
+                </div>
             </div>
 
            <div class="btnsBalance">
@@ -112,8 +116,8 @@
 
                 </div>
             </div>
-
         </section>
+        </div>
 
 
         <section class="Movimientos">
