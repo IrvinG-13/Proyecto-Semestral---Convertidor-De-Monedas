@@ -40,37 +40,45 @@
                 <a href="Perfil.html" class="navNo" id="btnPerfil">Perfil</a>
         </nav>
     </header>
+<!----------------------Main--------------------------->
         <main>
-            <div class="tarjeta-perfil">
-                <div class="seccion-avatar">
-                    <div class="circulo-avatar">
-                        <img src="https://static.vecteezy.com/system/resources/previews/005/545/335/non_2x/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" alt="Avatar Perfil">
+            <section class="Cuadro-Izquierda">
+                <div class="perfil">
+                    <img src="../Assets/perfilavatar.jpg" alt="Perfil">
+                    <h2 class="Nombre">Daniel Smith</h2>
+                </div>
+                <ul class="Menu-opciones">
+                    <li class="item Activo">
+                      <i class="bi bi-person"></i> Información personal
+                    </li>
+                    <li class="item">
+                        <i class="bi bi-lock"></i> Contraseña
+                    </li>
+                    <li class="item">
+                        <i class="bi bi-box-arrow-right"></i>Cerrar Sesión
+                    </li>
+                </ul>
+            </section>
+
+            <section class="Cuadro-Derecha">
+                <h2>Información Personal</h2>
+                <div class="formulario">
+                    <div class="formularitos">
+                        <label for="text">Nombre:</label>
+                        <input type="text" value="Daniel Smith">
+                    </div>
+                    <div class="formularitos">
+                        <label for="text">Correo:</label>
+                        <input type="text" placeholder="Danie.Smith@gmail.com">
+                    </div>
+                    <div class="formularitos">
+                        <label for="text">Contraseña:</label>
+                        <input type="password" value="">
                     </div>
                 </div>
-                <div class="seccion-formulario">
-
-                    <div class="envoltura-input">
-                        <label>Nombre</label>
-                        <input id="nombrePerfil" type="text"  readonly>
-                    </div>
-
-                    <div class="envoltura-input">
-                        <label>Apellido</label>
-                        <input id="apellidoPerfil" type="text"  readonly>
-                    </div>
-
-                    <div class="envoltura-input">
-                        <label>Correo</label>
-                        <input id="correoPerfil" type="text"  readonly>
-                    </div>
-
-                    
-
-                    <button class="boton-editar">Editar Perfil</button>
-                </div>
-            </div>
+            </section>
         </main>
-
+<!----------------------FOOTER--------------------------->
         <footer> 
         <div class="informacionFooter">
             <div class="servicios">
