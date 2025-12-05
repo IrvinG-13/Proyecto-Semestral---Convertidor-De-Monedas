@@ -73,6 +73,10 @@
                 <button id="btnRegistrarGastos" class="btnRegistrarGastos">
                     Registrar Gasto
                 </button>
+
+                <button id="btnDescargarPDF" class="btnRegistrarGastos" onclick="descargarPDF()" >
+                    📄 Descargar Reporte PDF
+                </button>    
             </div>
 
 
@@ -116,7 +120,16 @@
 
 
         <section class="Movimientos">
-            <h2 style="margin-left: 20px ;" id="TituloMovimientosRecientes">Movimientos Recientes</h2>
+            <div style="margin-left: 20px;">
+                <h2 id="TituloMovimientosRecientes">Movimientos Recientes</h2>
+                <!--Filtro de movimientos --> 
+                <select name="Filtrar Movimientos" id="filtroMovimientos" class="btnRegistrarGastos" onclick="obtenerMovimientos()">
+                    <option value="10" selected disabled>Filtrar Movimientos</option>
+                    <option value="3">3 Últimos Movimientos</option>
+                    <option value="5">5 Últimos Movimientos</option>
+                    <option value="99">Todos los Movimientos</option>
+                </select>
+            </div>
             
             <div class="gridMov">
                 <p>Fecha</p>

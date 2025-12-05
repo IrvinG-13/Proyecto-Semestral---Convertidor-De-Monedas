@@ -1,13 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Services;
 using ProjectMoneyExchange.Data;
 using ProjectMoneyExchange.Models;
 using ProjectMoneyExchange.Models.ModelosAPIS;
+using System.ComponentModel.DataAnnotations;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace ProjectMoneyExchange.Controllers
 {
     [Route("api/[controller]")]
+    [EnableCors("AllowAll")]
     [ApiController]
     public class UsuarioController : ControllerBase
     {
@@ -167,6 +171,97 @@ namespace ProjectMoneyExchange.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, new { mensaje = "error en el servidor", error = ex.Message });
+            }
+        }
+
+        [HttpPut("updateProfile")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult> UpdateProfile(
+        [FromBody] APIActualizarPerfil request,
+        [FromQuery] string correo)
+        {
+            try
+            {
+                // 1. Validación básica
+                if (string.IsNullOrWhiteSpace(correo))
+                {
+                    return BadRequest(new { mensaje = "El correo es requerido" });
+                }
+
+                // 2. Buscar usuario
+                var usuario = await _context.modeloUsuarios
+                    .FirstOrDefaultAsync(u => u.Correo_User == correo.Trim().ToLower());
+
+                if (usuario == null)
+                {
+                    return Unauthorized(new { mensaje = "Usuario no encontrado" });
+                }
+
+                // 3. Manejar solo la imagen de perfil
+                // Si viene null o vacío, eliminamos la foto
+                usuario.Perfil_User = string.IsNullOrWhiteSpace(request.Perfil_User)
+                    ? null
+                    : request.Perfil_User.Trim();
+
+                await _context.SaveChangesAsync();
+
+                return Ok(new
+                {
+                    success = true,
+                    mensaje = string.IsNullOrWhiteSpace(request.Perfil_User)
+                        ? "Foto de perfil eliminada"
+                        : "Foto de perfil actualizada",
+                    fotoPerfil = usuario.Perfil_User
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    success = false,
+                    mensaje = "Error interno del servidor",
+                    error = ex.Message
+                });
+            }
+        }
+
+        //Endpoint para Obtener foto de perfil
+        [HttpGet("getProfilePhoto")]
+        public async Task<ActionResult> GetProfilePhoto([FromQuery] string correo)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(correo))
+                {
+                    return BadRequest(new { mensaje = "El correo es requerido" });
+                }
+
+                var usuario = await _context.modeloUsuarios
+                    .FirstOrDefaultAsync(u => u.Correo_User == correo.Trim().ToLower());
+
+                if (usuario == null)
+                {
+                    return NotFound(new { mensaje = "Usuario no encontrado" });
+                }
+
+                return Ok(new
+                {
+                    success = true,
+                    fotoPerfil = usuario.Perfil_User, // Puede ser null
+                    tieneFoto = !string.IsNullOrEmpty(usuario.Perfil_User)
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    success = false,
+                    mensaje = "Error al obtener foto",
+                    error = ex.Message
+                });
             }
         }
 

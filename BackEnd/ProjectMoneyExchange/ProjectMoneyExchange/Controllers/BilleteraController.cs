@@ -1,11 +1,18 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿//ITEXTSHARP
+
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using ProjectMoneyExchange.Data;
 using ProjectMoneyExchange.Models;
 using ProjectMoneyExchange.Models.ModelosAPIS;
-
+using System;
+using System.Drawing;
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Grid;
 
 namespace ProjectMoneyExchange.Controllers
 {
@@ -231,9 +238,89 @@ namespace ProjectMoneyExchange.Controllers
                     errorCompleto = errorCompleto  // ← Esto te dará el error real
                 });
             }
-            
-
-           
         }
+
+        // PASO A PASO COMENTADO
+
+        [HttpGet("pdf-syncfusion-fixed/{ID_Billetera}")]
+        public async Task<IActionResult> GenerarPDFUltraSimple(int ID_Billetera, string correo)
+        {
+            try
+            {
+                // Obtener datos de la billetera
+                var movimientos = await _context.modeloBilleteras
+                    .Where(m => m.ID_Billetera == ID_Billetera)
+                    .OrderByDescending(m => m.FechaRegistro)
+                    .Take(30)
+                    .ToListAsync();
+
+                if (!movimientos.Any())
+                    return NotFound("No hay datos");
+
+                //Obtener datos del usuario
+                var usuario = await _context.modeloUsuarios.Where(u => u.Correo_User == correo).ToListAsync();
+
+
+                // Crear PDF
+                using (PdfDocument doc = new PdfDocument())
+                {
+                    PdfPage page = doc.Pages.Add();
+                    PdfGraphics g = page.Graphics;
+
+                    PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 11);
+                    PdfFont titleFont = new PdfStandardFont(PdfFontFamily.Helvetica, 16, PdfFontStyle.Bold);
+
+                    // Título
+                    g.DrawString("REPORTE FINANCIERO", titleFont,
+                        PdfBrushes.Black, new Syncfusion.Drawing.PointF(50, 30));
+
+                    // Información
+                    foreach (var user in usuario) 
+                    {
+                        g.DrawString($"Billetera: {ID_Billetera} | Fecha: {DateTime.Now:dd/MM/yyyy} | Nombre: {user.Nombre_User}",
+                        font, PdfBrushes.Black, new Syncfusion.Drawing.PointF(50, 60));
+                    }
+                    
+
+                    // Lista de movimientos
+                    float y = 90;
+                    decimal total = 0;
+
+                    foreach (var mov in movimientos)
+                    {
+                        string tipo = mov.TipoMovimiento?.ToUpper() ?? "";
+                        string texto = $"{mov.FechaRegistro:dd/MM/yyyy HH:mm} - {mov.Categoria} - ${mov.Monto:N2} - ${mov.RegistroMoneda}";
+
+                        PdfBrush color = tipo == "GASTO" ? PdfBrushes.Red :
+                                        tipo == "INGRESO" ? PdfBrushes.Green :
+                                        PdfBrushes.Black;
+
+                        g.DrawString(texto, font, color, new Syncfusion.Drawing.PointF(50, y));
+                        y += 18;
+
+                        //total += tipo == "GASTO" ? -mov.Monto : mov.Monto;
+                    }
+
+                    // Total
+                    /*g.DrawString($"Total general: ${total:N2}",
+                        new PdfStandardFont(PdfFontFamily.Helvetica, 12, PdfFontStyle.Bold),
+                        total >= 0 ? PdfBrushes.Green : PdfBrushes.Red,
+                        new Syncfusion.Drawing.PointF(50, y + 20)); */
+
+                    // Guardar
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        doc.Save(ms);
+                        return File(ms.ToArray(), "application/pdf", "reporte.pdf");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+
     }
 }

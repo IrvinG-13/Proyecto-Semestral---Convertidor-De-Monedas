@@ -201,6 +201,9 @@ async function actualizarMonedaSeleccionada() {
  */
 async function obtenerMovimientos() {
     try {
+        const filtro = document.getElementById("filtroMovimientos").value;
+        console.log("Filtro seleccionado:", filtro);
+        const URL_Movimientos = `https://localhost:7149/api/Billetera/usuarios/${id}/movimientos?cantidad=${filtro}`;
         const respuesta = await fetch(URL_Movimientos, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
@@ -427,6 +430,56 @@ async function iniciarPagina() {
         console.log("Página inicializada correctamente");
     } catch (error) {
         console.error("Error inicializando la página:", error);
+    }
+}
+
+
+/////////////////////////////
+/// FUNCION DESCARGAR PDF ///
+///////////////////////////
+
+async function descargarPDF() {
+    try {
+        // 1. Obtener el ID_Billetera del usuario
+        // Depende de cómo lo tengas almacenado
+        const idBilletera = id; // Usando la variable global 'id' definida al inicio    
+        
+        if (!idBilletera) {
+            alert("No se encontró el ID de billetera");
+            return;
+        }
+        
+        // 2. Mostrar mensaje de carga
+        const boton = document.getElementById('btnDescargarPDF');
+        const textoOriginal = boton.innerHTML;
+        boton.innerHTML = "Generando PDF...";
+        boton.disabled = true;
+        
+        // 3. URL del endpoint - AJUSTA el nombre del controlador
+        // Si tu controlador se llama "SaldoBilleteraController":
+        const url = `https://localhost:7149/api/Billetera/pdf-syncfusion-fixed/${idBilletera}?correo=${correo_user}`;
+        
+        console.log("Descargando PDF desde:", url);
+        
+        // 4. Opción A: Abrir en nueva pestaña (más simple)
+        window.open(url, '_blank');
+        
+        // 5. Restaurar botón
+        setTimeout(() => {
+            boton.innerHTML = textoOriginal;
+            boton.disabled = false;
+        }, 2000);
+        
+    } catch (error) {
+        console.error("Error descargando PDF:", error);
+        alert("Error al generar PDF: " + error.message);
+        
+        // Restaurar botón
+        const boton = document.getElementById('btnDescargarPDF');
+        if (boton) {
+            boton.innerHTML = "📄 Descargar Reporte PDF";
+            boton.disabled = false;
+        }
     }
 }
 

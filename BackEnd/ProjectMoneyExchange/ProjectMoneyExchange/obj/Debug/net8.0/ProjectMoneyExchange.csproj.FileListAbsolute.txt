@@ -417,3 +417,6 @@ C:\Users\USURIO\Documents\Software 5\Proyecto-Semestral---Convertidor-De-Monedas
 C:\Users\USURIO\Documents\Software 5\Proyecto-Semestral---Convertidor-De-Monedas\BackEnd\ProjectMoneyExchange\ProjectMoneyExchange\obj\Debug\net8.0\ProjectMoneyExchange.pdb
 C:\Users\USURIO\Documents\Software 5\Proyecto-Semestral---Convertidor-De-Monedas\BackEnd\ProjectMoneyExchange\ProjectMoneyExchange\obj\Debug\net8.0\ProjectMoneyExchange.genruntimeconfig.cache
 C:\Users\USURIO\Documents\Software 5\Proyecto-Semestral---Convertidor-De-Monedas\BackEnd\ProjectMoneyExchange\ProjectMoneyExchange\obj\Debug\net8.0\ref\ProjectMoneyExchange.dll
+C:\Users\Smith\Documents\SOFTWARE V\SemestralMoneyExchange\Proyecto-Semestral---Convertidor-De-Monedas\BackEnd\ProjectMoneyExchange\ProjectMoneyExchange\bin\Debug\net8.0\Syncfusion.Compression.Portable.dll
+C:\Users\Smith\Documents\SOFTWARE V\SemestralMoneyExchange\Proyecto-Semestral---Convertidor-De-Monedas\BackEnd\ProjectMoneyExchange\ProjectMoneyExchange\bin\Debug\net8.0\Syncfusion.Licensing.dll
+C:\Users\Smith\Documents\SOFTWARE V\SemestralMoneyExchange\Proyecto-Semestral---Convertidor-De-Monedas\BackEnd\ProjectMoneyExchange\ProjectMoneyExchange\bin\Debug\net8.0\Syncfusion.Pdf.Portable.dll

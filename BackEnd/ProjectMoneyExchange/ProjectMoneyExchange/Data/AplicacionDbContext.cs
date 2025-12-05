@@ -43,6 +43,8 @@ namespace ProjectMoneyExchange.Data
 
                 entity.Property(e => e.Contraseña_User).IsRequired().HasMaxLength(50);
 
+                entity.Property(e => e.Perfil_User).IsRequired(false).HasMaxLength(50);
+
             });
 
             /////////////////////////////////

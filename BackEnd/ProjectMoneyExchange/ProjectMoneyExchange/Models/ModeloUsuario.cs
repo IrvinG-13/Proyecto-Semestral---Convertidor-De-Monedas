@@ -10,6 +10,7 @@ namespace ProjectMoneyExchange.Models
         public string Apellido_User { get; set; }
         public string Correo_User { get; set; }
         public string Contraseña_User { get; set; }
+        public string? Perfil_User  {  get; set; }  
 
         [JsonIgnore]
         

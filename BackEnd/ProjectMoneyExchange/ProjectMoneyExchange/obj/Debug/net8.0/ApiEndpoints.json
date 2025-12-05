@@ -1,6 +1,27 @@
 [
   {
     "ContainingType": "ProjectMoneyExchange.Controllers.BilleteraController",
+    "Method": "GenerarPDFUltraSimple",
+    "RelativePath": "api/Billetera/pdf-syncfusion-fixed/{ID_Billetera}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID_Billetera",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "correo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectMoneyExchange.Controllers.BilleteraController",
     "Method": "GetUltimosMovimientos",
     "RelativePath": "api/Billetera/usuarios/{idBilletera}/movimientos",
     "HttpMethod": "GET",
@@ -115,6 +136,22 @@
   },
   {
     "ContainingType": "ProjectMoneyExchange.Controllers.UsuarioController",
+    "Method": "GetProfilePhoto",
+    "RelativePath": "api/Usuario/getProfilePhoto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "correo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectMoneyExchange.Controllers.UsuarioController",
     "Method": "Login",
     "RelativePath": "api/Usuario/login",
     "HttpMethod": "POST",
@@ -172,6 +209,56 @@
           "text/json"
         ],
         "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProjectMoneyExchange.Controllers.UsuarioController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/Usuario/updateProfile",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ProjectMoneyExchange.Models.ModelosAPIS.APIActualizarPerfil",
+        "IsRequired": true
+      },
+      {
+        "Name": "correo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
       }
     ]
   }

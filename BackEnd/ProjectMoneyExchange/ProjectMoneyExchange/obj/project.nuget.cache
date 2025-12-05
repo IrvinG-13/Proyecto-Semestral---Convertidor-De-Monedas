@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rE6aJw9rOZI=",
+  "dgSpecHash": "f8Urq5M3Ips=",
   "success": true,
   "projectFilePath": "C:\\Users\\Smith\\Documents\\SOFTWARE V\\SemestralMoneyExchange\\Proyecto-Semestral---Convertidor-De-Monedas\\BackEnd\\ProjectMoneyExchange\\ProjectMoneyExchange\\ProjectMoneyExchange.csproj",
   "expectedPackageFiles": [
@@ -52,6 +52,9 @@
     "C:\\Users\\Smith\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "C:\\Users\\Smith\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
     "C:\\Users\\Smith\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.2\\swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
+    "C:\\Users\\Smith\\.nuget\\packages\\syncfusion.compression.net.core\\25.1.41\\syncfusion.compression.net.core.25.1.41.nupkg.sha512",
+    "C:\\Users\\Smith\\.nuget\\packages\\syncfusion.licensing\\25.1.41\\syncfusion.licensing.25.1.41.nupkg.sha512",
+    "C:\\Users\\Smith\\.nuget\\packages\\syncfusion.pdf.net.core\\25.1.41\\syncfusion.pdf.net.core.25.1.41.nupkg.sha512",
     "C:\\Users\\Smith\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Smith\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Smith\\.nuget\\packages\\system.composition\\6.0.0\\system.composition.6.0.0.nupkg.sha512",

@@ -120,6 +120,10 @@ namespace ProjectMoneyExchange.Migrations
                         .HasMaxLength(25)
                         .HasColumnType("nvarchar(25)");
 
+                    b.Property<string>("Perfil_User")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.HasKey("Correo_User");
 
                     b.ToTable("USUARIO", (string)null);

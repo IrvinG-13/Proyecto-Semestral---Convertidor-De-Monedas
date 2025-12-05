@@ -207,7 +207,7 @@ main{
 }
 
 /*Boton de editar*/
-.boton-editar{
+.btn-profilepicture, .boton-editar{
     margin-top: 15px;
     align-self: flex-start;
     padding: 8px 30px;

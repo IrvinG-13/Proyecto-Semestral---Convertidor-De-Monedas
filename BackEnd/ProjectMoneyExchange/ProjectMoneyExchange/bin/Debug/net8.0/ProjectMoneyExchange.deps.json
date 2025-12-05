@@ -11,7 +11,8 @@
           "Microsoft.EntityFrameworkCore": "8.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.0",
-          "Swashbuckle.AspNetCore": "6.6.2"
+          "Swashbuckle.AspNetCore": "6.6.2",
+          "Syncfusion.Pdf.Net.Core": "25.1.41"
         },
         "runtime": {
           "ProjectMoneyExchange.dll": {}
@@ -649,6 +650,35 @@
           }
         }
       },
+      "Syncfusion.Compression.Net.Core/25.1.41": {
+        "runtime": {
+          "lib/net8.0/Syncfusion.Compression.Portable.dll": {
+            "assemblyVersion": "25.1.41.0",
+            "fileVersion": "25.1.41.0"
+          }
+        }
+      },
+      "Syncfusion.Licensing/25.1.41": {
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "25.1.41.0",
+            "fileVersion": "25.1.41.0"
+          }
+        }
+      },
+      "Syncfusion.Pdf.Net.Core/25.1.41": {
+        "dependencies": {
+          "Syncfusion.Compression.Net.Core": "25.1.41",
+          "Syncfusion.Licensing": "25.1.41",
+          "System.Text.Encoding.CodePages": "6.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Pdf.Portable.dll": {
+            "assemblyVersion": "25.1.41.0",
+            "fileVersion": "25.1.41.0"
+          }
+        }
+      },
       "System.CodeDom/4.4.0": {
         "runtime": {
           "lib/netstandard2.0/System.CodeDom.dll": {
@@ -1240,6 +1270,27 @@
       "sha512": "sha512-mBBb+/8Hm2Q3Wygag+hu2jj69tZW5psuv0vMRXY07Wy+Rrj40vRP8ZTbKBhs91r45/HXT4aY4z0iSBYx1h6JvA==",
       "path": "swashbuckle.aspnetcore.swaggerui/6.6.2",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512"
+    },
+    "Syncfusion.Compression.Net.Core/25.1.41": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a3CJ/5GLTP46XuIyh+C//cCIbdQlbohD5mwPqSHVIvY6ThTNaugPuG6KRFf4Y1aZz4EoHYoJ/Zmv26/sXJ4TyA==",
+      "path": "syncfusion.compression.net.core/25.1.41",
+      "hashPath": "syncfusion.compression.net.core.25.1.41.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/25.1.41": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QSmNLA7W2mnl/hO/a5GQepXMBgXqOIRvEwvwJR1QGdDL3dBLxuowrBazsDQI8iJDzDZMMFR2Qi6FQY6KsSmZBQ==",
+      "path": "syncfusion.licensing/25.1.41",
+      "hashPath": "syncfusion.licensing.25.1.41.nupkg.sha512"
+    },
+    "Syncfusion.Pdf.Net.Core/25.1.41": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4rPhVKZIfVatnFwKqFL+TNuIGguLnrES5/Q18uAVnBidjnYnrGtVGUYCPJObIupOQ/uRSW8h2AQl38ZxTR8r/w==",
+      "path": "syncfusion.pdf.net.core/25.1.41",
+      "hashPath": "syncfusion.pdf.net.core.25.1.41.nupkg.sha512"
     },
     "System.CodeDom/4.4.0": {
       "type": "package",

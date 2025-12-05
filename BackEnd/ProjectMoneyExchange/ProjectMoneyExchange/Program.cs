@@ -28,6 +28,15 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
+// Middleware de logging
+app.Use(async (context, next) =>
+{
+    var logger = context.RequestServices.GetRequiredService<ILogger<Program>>();
+    logger.LogInformation($"Request: {context.Request.Method} {context.Request.Path}");
+    await next();
+    logger.LogInformation($"Response: {context.Response.StatusCode}");
+});
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

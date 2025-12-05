@@ -40,10 +40,11 @@
     </header>
         <main>
             <div class="tarjeta-perfil">
-                <div class="seccion-avatar">
-                    <div class="circulo-avatar">
+                <div class="seccion-avatar" style="display: grid;">
+                    <div class="circulo-avatar" id="circulo-avatar">
                         <img src="https://static.vecteezy.com/system/resources/previews/005/545/335/non_2x/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" alt="Avatar Perfil">
                     </div>
+                    <button id="upload-btn" class="btn-profilepicture">Cambiar foto de perfil</button>
                 </div>
                 <div class="seccion-formulario">
 
@@ -67,6 +68,16 @@
                     <button class="boton-editar">Editar Perfil</button>
                 </div>
             </div>
+
+        <!-- Contenedor para mostrar imágenes del assets -->
+            <div id="assets-gallery" class="assets-gallery" style="display: none;">
+                <h3>Selecciona una imagen:</h3>
+                <div class="image-grid">
+                    <!-- Las imágenes se cargarán dinámicamente desde assets -->
+                </div>
+            </div>  
+             <!-- Vista previa -->
+            <div id="preview-container" class="preview-container"></div>          
         </main>
 
         <footer>
@@ -80,6 +91,7 @@
         </footer>
         
         <script src="../JAVASCRIPT/Home.js"></script>
+        <script src="../JAVASCRIPT/ProfileManager.js"></script>
         <script src="../JAVASCRIPT/Profile.js"></script>
     </body>
 </html>
