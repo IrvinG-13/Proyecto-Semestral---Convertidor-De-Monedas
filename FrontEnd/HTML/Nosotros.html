@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Convertidor De Monedas</title>
     <!--CSS-->
-    <link rel="stylesheet" href="../CSS/Nosotros.css">
     <link rel="stylesheet" href="../CSS/Home.css">
+    <link rel="stylesheet" href="../CSS/Billtera.css">
+    <link rel="stylesheet" href="../CSS/Nosotros.css">
+
     <!--Iconos-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <!----------------------BANNER SUPERIOR--------------------------->
-
     <!----------------------ENCABEZADO--------------------------->
     <header>
         <div class="banner">
@@ -22,7 +22,9 @@
             </div>
             <div class="buscadorYRedes">
                 <div class="buscador">
-                    <input placeholder="Buscar..." type="text">
+                    <a href="https://www.google.com" target="_blank" class="linkBuscar">
+                    <span>Buscar...</span>
+                    </a>
                     <i class="bi bi-search"></i>
                 </div>
                 <div class="redes">
@@ -30,7 +32,6 @@
                     <a href=""><i class="bi bi-twitter-x"></i></a>
                     <a href=""><i class="bi bi-instagram"></i></a> 
                 </div>
-                
             </div>
         </div>
         
@@ -41,30 +42,45 @@
                 <a href="Nosotros.html" class="navNo">Nosotros</a>
                 <a href="Perfil.html" class="navNo" id="btnPerfil">Perfil</a>
         </nav>
+
+        <!-- Botón Hamburguesa (solo móvil) -->
+        <button id="btnHamburger" class="hamburger-btn">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <!-- Menú móvil oculto -->
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="Home.html">Inicio</a>
+            <a href="Billetera.html">Billetera</a>
+            <a href="Mapa.html">Mapa</a>
+            <a href="Nosotros.html">Nosotros</a>
+            <a href="Perfil.html">Perfil</a>
+        </div>
     </header>
     <!----------------------MAIN--------------------------->
-    <main>
-        <h2>Nosotros</h2>
+    <main class="mainNosotros">
+        <h1>Nosotros</h1>
         <section>
         <!--Persona#1-->
             <div id="Carta">
                 <div id="imagen_contacto">
-                    <img src="" alt="Imagen Elisa">
+                    <img src="https://static.vecteezy.com/system/resources/previews/005/545/335/non_2x/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" alt="Imagen Elisa">
                 </div>
                 <div id="Contenido">
                     <h2>Elisa Oses</h2>
                     <p>8-1033-934 <br>
                     Grupo: 1GS-123 <br>
                     Desarrollo y Gestión de Software 
-                </p>
+                    </p>  
+                    <br>
+                    <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eius dolorem itaque voluptates repudiandae voluptatibus deleniti quae ad sequi repellendus? Architecto voluptates alias ea fuga quis magnam et adipisci repudiandae.</p>             
+                </div>
              </div>
-             </div>
-        </section>
-        <section>
+
         <!--Persona#2-->
             <div id="Carta">
                 <div id="imagen_contacto">
-                    <img src="" alt="Foto Irvin">
+                    <img src="https://static.vecteezy.com/system/resources/previews/005/545/335/non_2x/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" alt="Foto Irvin">
                 </div>
                 <div id="Contenido">
                     <h2>Irvin Gonzalez</h2>
@@ -72,20 +88,115 @@
                     Grupo: 1GS-123 <br>
                     Desarrollo y Gestión de Software 
                 </p>
+                <br>
+                <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eius dolorem itaque voluptates repudiandae voluptatibus deleniti quae ad sequi repellendus? Architecto voluptates alias ea fuga quis magnam et adipisci repudiandae.</p>  
              </div>
              </div>
-        </section>
+
+
+
+        <!--Persona#3-->
+            <div id="Carta">
+                <div id="imagen_contacto">
+                    <img src="https://static.vecteezy.com/system/resources/previews/005/545/335/non_2x/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" alt="Foto Daniel">
+                </div>
+                <div id="Contenido">
+                    <h2>Daniel Smith</h2>
+                    <p>?<br>
+                    Grupo: 1GS-123 <br>
+                    Desarrollo y Gestión de Software 
+                </p>
+                <br>
+                <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eius dolorem itaque voluptates repudiandae voluptatibus deleniti quae ad sequi repellendus? Architecto voluptates alias ea fuga quis magnam et adipisci repudiandae.</p>  
+             </div>
+             </div>
+
+
+
+        <!--Persona#4-->
+            <div id="Carta">
+                <div id="imagen_contacto">
+                    <img src="https://static.vecteezy.com/system/resources/previews/005/545/335/non_2x/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" alt="Foto Moises">
+                </div>
+                <div id="Contenido">
+                    <h2>Moises Murgas</h2>
+                    <p>?<br>
+                    Grupo: 1GS-123 <br>
+                    Desarrollo y Gestión de Software 
+                </p>
+                <br>
+                <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eius dolorem itaque voluptates repudiandae voluptatibus deleniti quae ad sequi repellendus? Architecto voluptates alias ea fuga quis magnam et adipisci repudiandae.</p>  
+             </div>
+             </div>
+
+
+
+        <!--Persona#5-->
+            <div id="Carta">
+                <div id="imagen_contacto">
+                    <img src="https://static.vecteezy.com/system/resources/previews/005/545/335/non_2x/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" alt="Foto trally">
+                </div>
+                <div id="Contenido">
+                    <h2>Trally</h2>
+                    <p>?<br>
+                    Grupo: 1GS-123 <br>
+                    Desarrollo y Gestión de Software 
+                </p>
+                <br>
+                <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eius dolorem itaque voluptates repudiandae voluptatibus deleniti quae ad sequi repellendus? Architecto voluptates alias ea fuga quis magnam et adipisci repudiandae.</p>  
+             </div>
+             </div>
+             </section>
     </main>
     <!----------------------PIE DE PAGINA--------------------------->
-    <footer>
-        <h2>Logo</h2>
-        <div class="socialMedias">
-            <i class="bi bi-twitter-x"></i>
-            <i class="bi bi-youtube"></i>
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-facebook"></i>
+    <footer> 
+        <div class="informacionFooter">
+            <div class="servicios">
+                <h3>Servicios</h3>
+                <p>Financiamiento</p>
+                <p>Corporativo</p>
+                <p>Peticiones, Quejas y Reclamos</p>
+            </div>
+            <div class="moneyExchange">
+                <h3>Money ExChange</h3>
+                <p>¿Quienes somos?</p>
+                <p>Terminos y Condiciones</p>
+                <p>Preguntas Frecuentes</p>
+            </div>
+            <div class="informacion">
+                <h3>Informacion</h3>
+                <p>Servicio Tecnico</p>
+                <p>Corporativo</p>
+                <p>Mi Cuenta</p>
+            </div>
+        </div>
+        <div class="footerUnder">
+            <div class="inputMoneyExchange">
+                <h3>Mas Informacion Sobre Nosotros</h3>
+                <input placeholder="INTRODUCE TU EMAIL..." class="inputSuscribe" type="email">
+                <button class="btnSus">Suscribete</button>
+            </div>
+            <div class="logoFooter">
+                <img class="footer-logo" src="../Assets/MoneyExchange.png" alt="Logo">
+                <p>Money Exchange -- Gestion y conversión de monedas.</p>
+                <p class="copy">© 2025 Money Exchange — Todos los derechos reservados.</p>
+            </div>
+            
         </div>
     </footer>
+
+    <script>
+        const btnHamburger = document.getElementById("btnHamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        btnHamburger.addEventListener("click", () => {
+            if (mobileMenu.style.display === "flex") {
+                mobileMenu.style.display = "none";
+            } else {
+                mobileMenu.style.display = "flex";
+            }
+        });
+    </script>
 
     <!--JAVASCRIPT-->
     <script src="../JAVASCRIPT/Home.js"></script>

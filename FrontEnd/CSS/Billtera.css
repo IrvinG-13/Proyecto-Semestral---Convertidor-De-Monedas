@@ -1,4 +1,11 @@
-
+body{
+    background-image:url(../Assets/FondoBilletera.png);
+}
+header {
+    position: relative;
+    background-color:#011d10d7;
+}
+h2{color:#011d10d7;}
 
 .mainBilletera{
   min-height: calc(100vh - 250px);
@@ -6,36 +13,59 @@
 }
 /*-----------------------------------------------------BalanceTotal (Billetera)---------------------------------*/ 
 .balanceTotal{
+    width: 80%;
+    margin: 20px auto;
+    background-color:#EBEADF;
+    border-radius: 20px;
+    padding: 0;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    overflow: hidden;
+    max-width: 850px;
+}
+.totalBalance{
+    padding: 25px 40px;
+    color: #011d10d7;
+    min-height: 120px;
+    border-radius: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin: 70px;
+    border-radius: 0;
+    flex-direction: column;
+    justify-content: center;
+}
+#saldoDisponible {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.totalBalance p {
+    margin: 0;
+    font-size: 16px;
+    opacity: 0.9;
 }
 
 .btnsBalance{
     display: flex;
-    gap: 25px;
+    gap: 15px;
+    padding: 20px 35px;
+    justify-content: right;
 }
 
 .btnCambiarMoneda, .btnRegistrarGastos{
-    
-    padding: 10px;
-    font-size: 15px;
-    border-radius: 12px;
-    background-color: transparent;
-    border: solid 2px #6e6d6d;
-    color: #6e6d6d;
-    transition: all ease 0.3s;
+    display: inline-block;
+    padding: 10px 25px;
+    background: #bac4a3;
+    border: 1px solid #011d10d7;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    transition: 0.3s;
 }
 
 .btnCambiarMoneda:hover, .btnRegistrarGastos:hover{
-    background-color: #98a089;
-    padding: 12px;
+    background: #30402E;
     color: white;
-    transition: 0.3s;
 }
 
 /*-----------------------------------------------------Movimientos (Billetera)---------------------------------*/ 
@@ -45,7 +75,6 @@
     margin: 70px;
     margin-top: 100px;
 }
-
 
 .titulos th{
     background-color: #93A267;
@@ -155,6 +184,8 @@ select{
     cursor: pointer;
 }
 
+
+
 /**-----------------------------------------------------Responsive---------------------------------*/
 
 @media (max-width: 600px) {
@@ -242,19 +273,39 @@ select{
         to   { opacity: 1; transform: translateY(0); }
     }
 
+    .balanceTotal {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+    margin: 20px !important;
+    gap: 15px;
+}
 
-    .balanceTotal { flex-direction: column; gap: 20px; margin: 20px; text-align: center; } 
 
-    .btnsBalance { flex-direction: column; width: 100%; gap: 15px; } 
+    .btnsBalance{
+      flex-direction: column;
+      align-items: center;         
+      gap: 12px;
+      width: 100%;
+    }
 
-    .btnCambiarMoneda, .btnRegistrarGastos { width: 100%; padding: 12px; } 
+  /* Forzamos tamaño compacto en MOBILE */
+  .btnCambiarMoneda, .btnRegistrarGastos{
+    width: 80% !important;      
+    max-width: 320px;          
+    font-size: 13px !important;   
+    padding: 8px 10px !important; 
+    border-radius: 10px !important;
+    margin: 0 auto !important;    
+    box-sizing: border-box;
+  }
 
-    .Movimientos { margin: 20px; margin-top: 40px; } 
+  .Movimientos { margin: 20px; margin-top: 40px; } 
 
       /* Ocultamos la tabla de encabezados */
-    .gridMov {
-        display: none !important;
-    }
+  .gridMov {
+    display: none !important;
+  }
 
     /* Cada movimiento en columna, estilo tarjeta */
     #movimientosRecientes .movim {
@@ -313,10 +364,8 @@ select{
 }
 
 
-/* ============================
-    Diseño para TABLET (600–992px)
-   ============================ */
-@media (min-width: 600px) and (max-width: 1460px) {
+/* ============================ Diseño para TABLET ============================ */
+@media (min-width: 600px) and (max-width: 960px) {
 
     .banner{
       justify-content: center !important;
@@ -345,6 +394,7 @@ select{
     .navHome {
         display: none !important;
     }
+
 
     /* Boton hamburguesa abajo a la derecha */
     .hamburger-btn {
@@ -414,12 +464,12 @@ select{
         gap: 20px;
     }
 
-    .btnCambiarMoneda,
-    .btnRegistrarGastos {
-        padding: 12px 20px;
-        font-size: 16px;
-        min-width: 180px;
+    .btnCambiarMoneda, .btnRegistrarGastos {
+        width: auto !important;
+        padding: 10px 14px !important;
+        font-size: 15px !important;
     }
+
 
     /* === Movimientos === */
     .Movimientos {
@@ -429,21 +479,30 @@ select{
     .gridMov {
         grid-template-columns: repeat(4, 1fr);
         font-size: 12px;
-        padding: 14px;
-        gap: 15px;
     }
 
     .gridMov :nth-child(4){
         display: none !important;
     }
 
+    .gridMov :nth-child(1){
+        text-align: center;
+    }
+
+    .gridMov :nth-child(2){
+        text-align: center;
+    }
+
+    .gridMov :nth-child(3){
+        text-align: center;
+    }
+
+    .gridMov :nth-child(5){
+        text-align: center;
+    }
+
     #movimientosRecientes .movim {
-        display: grid !important;
         grid-template-columns: repeat(4, 1fr) !important;
-        gap: 14px;
-        padding: 18px 10px;
-        margin-bottom: 5px;
-        border-bottom: 1px solid #ccc;
         font-size: 12px;
     }
 
@@ -451,14 +510,20 @@ select{
       font-size: 12px !important;
     }
 
-    #movimientosRecientes .movim p {
-        margin: 0;
-    }
-
     /* Monto destacado */
     #movimientosRecientes .movim p:nth-child(3) {
-        font-weight: bold;
+        text-align: center;
         font-size: 18px;
+    }
+
+    #movimientosRecientes .movim p:nth-child(2) {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #movimientosRecientes .movim p:nth-child(1) {
+        text-align: center;
+        font-size: 15px;
     }
 
     /* Tipo */
@@ -468,7 +533,7 @@ select{
 
     /* Saldo */
     #movimientosRecientes .movim p:nth-child(5) {
-        text-align: right;
+        text-align: center;
         font-size: 15px;
         font-weight: 600;
     }
@@ -485,4 +550,3 @@ select{
         margin: 8px;
     }
 }
-

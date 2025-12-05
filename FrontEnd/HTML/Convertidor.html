@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Convertidor De Monedas</title>
+    <title>Convertidor</title>
     <!--CSS-->
-    <link rel="stylesheet" href="../CSS/Convertidor.css">
     <link rel="stylesheet" href="../CSS/Home.css">
+    <link rel="stylesheet" href="../CSS/Convertidor.css">
     <!--Iconos-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
-       <!----------------------BANNER SUPERIOR--------------------------->
-
     <!----------------------ENCABEZADO--------------------------->
     <header>
         <div class="banner">
@@ -20,9 +18,11 @@
                 <img class="logo" src="../Assets/MoneyExchange.png" alt="">
                 <h1>Money ExChange</h1>
             </div>
-            <div class="buscadorYRedes">
+             <div class="buscadorYRedes">
                 <div class="buscador">
-                    <input placeholder="Buscar..." type="text">
+                    <a href="https://www.google.com" target="_blank" class="linkBuscar">
+                    <span>Buscar...</span>
+                    </a>
                     <i class="bi bi-search"></i>
                 </div>
                 <div class="redes">
@@ -74,13 +74,39 @@
         
     </main>
     <!----------------------PIE DE PAGINA--------------------------->
-    <footer>
-        <h2>Logo</h2>
-        <div class="socialMedias">
-            <i class="bi bi-twitter-x"></i>
-            <i class="bi bi-youtube"></i>
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-facebook"></i>
+    <footer> 
+        <div class="informacionFooter">
+            <div class="servicios">
+                <h3>Servicios</h3>
+                <p>Financiamiento</p>
+                <p>Corporativo</p>
+                <p>Peticiones, Quejas y Reclamos</p>
+            </div>
+            <div class="moneyExchange">
+                <h3>Money ExChange</h3>
+                <p>¿Quienes somos?</p>
+                <p>Terminos y Condiciones</p>
+                <p>Preguntas Frecuentes</p>
+            </div>
+            <div class="informacion">
+                <h3>Informacion</h3>
+                <p>Servicio Tecnico</p>
+                <p>Corporativo</p>
+                <p>Mi Cuenta</p>
+            </div>
+        </div>
+        <div class="footerUnder">
+            <div class="inputMoneyExchange">
+                <h3>Mas Informacion Sobre Nosotros</h3>
+                <input placeholder="INTRODUCE TU EMAIL..." class="inputSuscribe" type="email">
+                <button class="btnSus">Suscribete</button>
+            </div>
+            <div class="logoFooter">
+                <img class="footer-logo" src="../Assets/MoneyExchange.png" alt="Logo">
+                <p>Money Exchange -- Gestion y conversión de monedas.</p>
+                <p class="copy">© 2025 Money Exchange — Todos los derechos reservados.</p>
+            </div>
+            
         </div>
     </footer>
     
