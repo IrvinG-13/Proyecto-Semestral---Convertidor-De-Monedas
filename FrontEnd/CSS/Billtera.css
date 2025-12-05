@@ -199,88 +199,6 @@ select{
 
 @media (max-width: 600px) {
 
-    .banner{
-      justify-content: center !important;
-      align-items: center !important;
-    }
-
-    .contLogo{
-      width: 100% !important;
-      display: flex;
-      flex-direction: column;
-      justify-content: center !important;
-      align-items: center !important;
-    }
-
-    .contLogo h1{
-      display: none;
-    }
-
-    .logo{
-      margin: 0 auto;
-      display: block;
-    }
-
-    .buscadorYRedes{
-      display: none !important;
-    }
-
-
-    /* Ocultar el menu original */
-    .navHome {
-        display: none !important;
-    }
-
-    /* Boton hamburguesa abajo a la derecha */
-    .hamburger-btn {
-        display: flex !important;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #778470;
-        color: white;
-        border: none;
-        padding: 14px 16px;
-        border-radius: 50%;
-        font-size: 28px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.35);
-        z-index: 9999;
-        cursor: pointer;
-    }
-
-    /* Menu moviles */
-    .mobile-menu {
-        position: fixed;
-        bottom: 85px;
-        right: 20px;
-        background: #ffffff;
-        border-radius: 12px;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-        padding: 10px 0;
-        width: 170px;
-        display: none;
-        flex-direction: column;
-        z-index: 9998;
-        animation: fadeInMenu .22s ease-out;
-    }
-
-    .mobile-menu a {
-        padding: 12px;
-        text-decoration: none;
-        color: #333;
-        font-weight: 600;
-        border-radius: 8px;
-        transition: .2s ease;
-    }
-
-    .mobile-menu a:hover {
-        background: #f1f1f1;
-    }
-
-    @keyframes fadeInMenu {
-        from { opacity: 0; transform: translateY(10px); }
-        to   { opacity: 1; transform: translateY(0); }
-    }
 
     .balanceTotal {
     flex-direction: column !important;
@@ -364,99 +282,11 @@ select{
         order: 4;
     }
 
-    footer{ flex-direction: column; }
-
-    .socialMedias i{
-        font-size: 24px;
-        margin: 10px;
-    }
 }
 
 
 /* ============================ Diseño para TABLET ============================ */
 @media (min-width: 600px) and (max-width: 960px) {
-
-    .banner{
-      justify-content: center !important;
-      align-items: center !important;
-    }
-
-    .contLogo{
-      width: 100% !important;
-      display: flex;
-      flex-direction: column !important;
-      justify-content: center !important;
-      align-items: center !important;
-    }
-
-    .logo{
-      margin: 0 auto;
-      display: block;
-    }
-
-    .buscadorYRedes{
-      display: none !important;
-    }
-
-
-    /* Ocultar el menu original */
-    .navHome {
-        display: none !important;
-    }
-
-
-    /* Boton hamburguesa abajo a la derecha */
-    .hamburger-btn {
-        display: flex !important;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #778470;
-        color: white;
-        border: none;
-        padding: 14px 16px;
-        border-radius: 50%;
-        font-size: 28px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.35);
-        z-index: 9999;
-        cursor: pointer;
-    }
-
-    /* Menu moviles */
-    .mobile-menu {
-        position: fixed;
-        bottom: 85px;
-        right: 20px;
-        background: #ffffff;
-        border-radius: 12px;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-        padding: 10px 0;
-        width: 170px;
-        display: none;
-        flex-direction: column;
-        z-index: 9998;
-        animation: fadeInMenu .22s ease-out;
-    }
-
-    .mobile-menu a {
-        padding: 12px;
-        text-decoration: none;
-        color: #333;
-        font-weight: 600;
-        border-radius: 8px;
-        transition: .2s ease;
-    }
-
-    .mobile-menu a:hover {
-        background: #f1f1f1;
-    }
-
-    @keyframes fadeInMenu {
-        from { opacity: 0; transform: translateY(10px); }
-        to   { opacity: 1; transform: translateY(0); }
-    }
-
-    
 
     /* === Balance Total === */
     .balanceTotal {
@@ -545,18 +375,6 @@ select{
         text-align: center;
         font-size: 15px;
         font-weight: 600;
-    }
-
-    /* === Footer === */
-    footer {
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .socialMedias i {
-        font-size: 26px;
-        margin: 8px;
     }
 }
 
