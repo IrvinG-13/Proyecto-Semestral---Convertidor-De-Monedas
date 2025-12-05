@@ -30,22 +30,36 @@
                     <a href=""><i class="bi bi-twitter-x"></i></a>
                     <a href=""><i class="bi bi-instagram"></i></a> 
                 </div>
+                <button class="btnRegistrar"> <i class="bi bi-box-arrow-in-right"></i> Registrar</button>
                 
             </div>
         </div>
         
         <nav class="navHome">
-                <a href="Home.html" class="navActivo">Inicio</a>
-                <a href="Billetera.html" class="navNo">Billetera</a>
-                <a href="Mapa.html" class="navNo">Mapa</a>
-                <a href="Nosotros.html" class="navNo">Nosotros</a>
-                <a href="Perfil.html" class="navNo" id="btnPerfil">Perfil</a>
+                <a href="Home.html" class="navActivo"><i class="bi bi-house"></i> Inicio</a>
+                <a href="Billetera.html" class="navNo"><i class="bi bi-cash-stack"></i> Billetera</a>
+                <a href="Mapa.html" class="navNo"><i class="bi bi-compass"></i> Mapa</a>
+                <a href="Nosotros.html" class="navNo"><i class="bi bi-people"></i> Nosotros</a>
+                <a href="Perfil.html" class="navNo" id="btnPerfil"><i class="bi bi-person-lines-fill"></i> Perfil</a>
         </nav>
+        <!-- Botón Hamburguesa (solo móvil) -->
+        <button id="btnHamburger" class="hamburger-btn">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <!-- Menú móvil oculto -->
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="Home.html">Inicio</a>
+            <a href="Billetera.html">Billetera</a>
+            <a href="Mapa.html">Mapa</a>
+            <a href="Nosotros.html">Nosotros</a>
+            <a href="Perfil.html">Perfil</a>
+        </div>
     </header>
     <!----------------------MAIN--------------------------->
     <main>
         <section class="fondo">
-            <h2 class="typing" style="font-size: 56px; font-weight: 900; margin-bottom: 20px;">Bienvenido a Money Exchange !</h2>
+            <h2 class="typing" style="font-weight: 900; margin-bottom: 20px; margin-top: 170px;">Bienvenido a Money Exchange !</h2>
             <p>Convierte monedas rapidamentre y gestiona tus gastos. </p>
             <br>
             <button onclick="location.href='Convertidor.html'" class="btnConvertidor">Convertidor</button>
@@ -54,7 +68,7 @@
         <section class="intro">
             <div class="intro-contenedor">
                 <div class="intro-text">
-                    <h2>Estamos a tu disposición para ayudarte a obtener de una forma segura tus conversiones.</h2>
+                    <h2>Estamos a tu disposición para ayudarte a obtener tus conversiones.</h2>
                     <p>
                         Este sitio web fue creado con la intención de ayudar a todos los viajeros del mundo para que puedan disfritar cada momento de su viaje sin tener meido a no saber cuanto gastan.
                     </p>
@@ -123,20 +137,36 @@
                 <p>Mi Cuenta</p>
             </div>
         </div>
-        <div class="footerUnder">
-            <div class="inputMoneyExchange">
-                <h3>Mas Informacion Sobre Nosotros</h3>
-                <input placeholder="INTRODUCE TU EMAIL..." class="inputSuscribe" type="email">
-                <button class="btnSus">Suscribete</button>
-            </div>
-            <div class="logoFooter">
-                <img class="footer-logo" src="../Assets/MoneyExchange.png" alt="Logo">
-                <p>Money Exchange -- Gestion y conversión de monedas.</p>
-                <p class="copy">© 2025 Money Exchange — Todos los derechos reservados.</p>
-            </div>
-            
+
+    <!-- NO TOCO footerUnder -->
+    <div class="footerUnder">
+        <div class="inputMoneyExchange">
+            <h3>Mas Informacion Sobre Nosotros</h3>
+            <input placeholder="INTRODUCE TU EMAIL..." class="inputSuscribe" type="email">
+            <button class="btnSus">Suscribete</button>
         </div>
-    </footer>
+        <div class="logoFooter">
+            <img class="footer-logo" src="../Assets/MoneyExchange.png" alt="Logo">
+            <p>Money Exchange -- Gestion y conversión de monedas.</p>
+            <p class="copy">© 2025 Money Exchange — Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+   const btnHamburger = document.getElementById("btnHamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        btnHamburger.addEventListener("click", () => {
+            if (mobileMenu.style.display === "flex") {
+                mobileMenu.style.display = "none";
+            } else {
+                mobileMenu.style.display = "flex";
+            }
+        }); 
+</script>
+
+    
     
 
     <!--JAVASCRIPT-->

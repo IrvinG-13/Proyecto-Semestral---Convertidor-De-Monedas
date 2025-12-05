@@ -5,18 +5,26 @@ header {
 
 .mainConvertidor{
     display: flex;
-    height: 80vh;
+    height: auto;
     padding: 40px;
     align-items: center;
+    background-color: #ebeadf;
     flex-direction: column;
+}
+
+.mainConvertidor h1{
+    margin: 40px;
+    margin-bottom: 50px;
 }
 
 form{
     background-color: white;
-    width: 30%;
-    height: 40vh;
+    width: 40%;
+    height: 100%;
     padding: 20px;
     display: flex;
+    background-color: rgb(243, 242, 242);
+    backdrop-filter: blur(6px);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -24,6 +32,7 @@ form{
     margin: 10px;
     gap: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
 
 .bi-arrow-down-up{
@@ -62,6 +71,7 @@ select:focus-within{
 
 .contMoneda1 div, .contMoneda2 div{
     background-color: white;
+    display: flex;
     padding: 5px;
     margin-top: 10px;
     border-radius: 10px;
@@ -71,4 +81,96 @@ select:focus-within{
 
 .contMoneda1 div:focus-within, .contMoneda2 div:focus-within{
     outline: 2px solid black;
+}
+
+
+/*-----------------------------------------------------DISENIO MOVIL---------------------------------*/
+@media (max-width: 600px) {
+
+    form{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .contMoneda1, .contMoneda2{
+        width: 80%;
+    }
+
+    .contMoneda1, .contMoneda2 {
+        font-size: 12px;
+    }
+
+    #monto, #result{
+        padding: 6px;
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+    }
+
+
+    select{
+        padding: 6px;
+        border: none;
+        border-radius: 10px;
+        font-size: 12px;
+    }   
+
+    .bi-arrow-down-up{
+        background-color: #9fe870;
+        padding: 6px;
+        display: flex;
+        font-size: 12px;
+        color: black;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+}
+
+/* ============================ Disenio para TABLET ============================ */
+@media (min-width: 600px) and (max-width: 960px){
+
+    form{
+        width: 60%;
+        padding: 20px;
+    }
+
+    .contMoneda1, .contMoneda2{
+        width: 80%;
+    }
+
+    .contMoneda1, .contMoneda2 {
+        font-size: 12px;
+    }
+
+    #monto, #result{
+        padding: 8px;
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+    }
+
+
+    select{
+        padding: 2px;
+        border: none;
+        border-radius: 10px;
+        font-size: 12px;
+    }   
+
+    .bi-arrow-down-up{
+        background-color: #9fe870;
+        padding: 6px;
+        display: flex;
+        font-size: 12px;
+        color: black;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    
+
 }

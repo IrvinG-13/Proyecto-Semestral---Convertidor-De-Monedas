@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = 'e'>
+<html lang = 'es'>
     <head>
         <meta charset = "UTF-8">
         <meta name = "viewport" content="width=device-width, initial-scale=1.0">
@@ -26,17 +26,31 @@
                     <a href=""><i class="bi bi-twitter-x"></i></a>
                     <a href=""><i class="bi bi-instagram"></i></a> 
                 </div>
+                <button class="btnRegistrar"> <i class="bi bi-box-arrow-in-right"></i> Registrar</button>
                 
             </div>
         </div>
         
         <nav class="navHome">
-                <a href="Home.html" class="navActivo">Inicio</a>
-                <a href="Billetera.html" class="navNo">Billetera</a>
-                <a href="Mapa.html" class="navNo">Mapa</a>
-                <a href="Nosotros.html" class="navNo">Nosotros</a>
-                <a href="Perfil.html" class="navNo" id="btnPerfil">Perfil</a>
+                <a href="Home.html" class="navActivo"><i class="bi bi-house"></i> Inicio</a>
+                <a href="Billetera.html" class="navNo"><i class="bi bi-cash-stack"></i> Billetera</a>
+                <a href="Mapa.html" class="navNo"><i class="bi bi-compass"></i> Mapa</a>
+                <a href="Nosotros.html" class="navNo"><i class="bi bi-people"></i> Nosotros</a>
+                <a href="Perfil.html" class="navNo" id="btnPerfil"><i class="bi bi-person-lines-fill"></i> Perfil</a>
         </nav>
+        <!-- Botón Hamburguesa (solo móvil) -->
+        <button id="btnHamburger" class="hamburger-btn">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <!-- Menú móvil oculto -->
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="Home.html">Inicio</a>
+            <a href="Billetera.html">Billetera</a>
+            <a href="Mapa.html">Mapa</a>
+            <a href="Nosotros.html">Nosotros</a>
+            <a href="Perfil.html">Perfil</a>
+        </div>
     </header>
         <main>
             <div class="tarjeta-perfil">

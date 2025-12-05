@@ -16,3 +16,4 @@ const close = document.getElementById("Close");
 close.addEventListener("click", () => {
     window.location.href = "../HTML/home.html";
 });
+

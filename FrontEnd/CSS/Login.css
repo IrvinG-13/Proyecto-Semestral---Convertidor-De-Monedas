@@ -3,30 +3,46 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, sans-serif;
 }
+
+@font-face {font-family: "Kaio";src: url("../Fonts/KaioTRIAL-Bold-BF65f24de19552f.otf") format("opentype");font-weight: 400;}
+h1, h2 {font-family: "Kaio", sans-serif;}
+p,a ,label,input,button,span{font-family: "Kaio", sans-serif;}
 
 body {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
+    background-image: url(../Assets/backgroundlogin.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .contenedor {
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 80%;
+    border-radius: 20px;
     position: relative;
     background: white;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #Close{
-  color: black;
-  position: fixed;
-  top: 12px;
-  right: 12px;
-  z-index: 9999;
-  border: none;
-  font-size: 36px;   /* por encima del círculo */
+    background-color: transparent;
+    color: white;
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 9999;
+    border: none;
+    font-size: 36px;   /* por encima del círculo */
 }
 
 #Close:hover{
@@ -38,21 +54,25 @@ body {
 
 .circulo {
     position: absolute;
-    width: 120vh;
-    height: 120vh;
-    border-radius: 50%;
-    background: #4b5e3c;
+    left: -70px;           /* Mueve el círculo hacia la izquierda */
     top: 50%;
-    left: -60vh;              /* mitad dentro, mitad fuera a la izquierda */
+    left: 0%;
     transform: translateY(-50%);
-    transition: 0.7s ease;
-    z-index: 1;
+    width: 70vh;
+    height: 80.5vh;
+    border-radius: 20px;
+    background-image: url(../Assets/fondoLogin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: 0.7s ease;          /* Debajo del formulario */
 }
+
 
 
 /* círculo a la derecha cuando se crea cuenta */
 .movDerecho .circulo {
-    left: 75%;   /* si quieres más hacia adentro, baja a 70% o 65% */
+    left: 50%;   /* si quieres más hacia adentro, baja a 70% o 65% */
 }
 
 /* ----------------- Paneles ------------- */
@@ -60,10 +80,11 @@ body {
 .izquierdo,
 .derecho {
     position: absolute;
-    width: 40%;
+    width: auto;
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
     z-index: 2;
     transition: 0.7s ease;
@@ -98,14 +119,25 @@ body {
 .derecho .btn-outline {
     margin-top: 20px;
     width: 150px;
-    padding: 8px 0;
+    padding: 10px;
     border-radius: 20px;
     border: 1px solid white;
     background: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     color: white;
     cursor: pointer;
     font-size: 14px;
 }
+
+.btn-outline:hover{
+    background-color: white;
+    color: #2c3e2e;
+    transition: 0.3s;
+}
+
+
 
 /* Al pasar a crear cuenta: se esconde el panel izquierdo y aparece el derecho */
 .movDerecho .izquierdo {
@@ -146,24 +178,36 @@ label {
 
 input {
     width: 100%;
-    background: #e7ecee;
     border-radius: 6px;
     border: none;
     outline: none;
     padding: 10px;
     margin-bottom: 15px;
+    color: #2c3e2e;
+    border: 2px solid white;
+    background: white;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .btn {
     width: 130px;
-    padding: 7px 0;
+    padding: 10px;
     margin-top: 10px;
     border-radius: 20px;
     border: 1px solid #4b5e3c;
-    background: white;
-    color: #4b5e3c;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #2c3e2e;
     cursor: pointer;
     transition: 0.2s;
+}
+
+.btn:hover{
+    background-color: white;
+    color: #2c3e2e;
+    transition: 0.3s;
 }
 
 /* ------ POSICION EN MODO LOGIN ------ */
@@ -194,3 +238,4 @@ input {
     opacity: 1;
     pointer-events: auto;
 }
+

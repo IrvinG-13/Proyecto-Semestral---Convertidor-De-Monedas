@@ -2,13 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/*Reset para todos los elementos*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /*el padding y el borde se incluye en el ancho y alto toal del elemento*/
-    font-family: "Monserrat", sans-serif; /*Establece la fuente principal*/
-}
 
 body{
     min-height: 100vh; /* Hace que el cuerpo ocupe */
@@ -30,37 +23,21 @@ header{
 /*Clase navHome (Contenedro principal)*/
 
 .navHome{
+    height: 100%;
     display: flex;
-    justify-content: space-between; /*coloca los elemntos hijos en el eje principal y colocanco un espacio entre ellos*/
+    justify-content: space-around;
     align-items: center;
-    padding: 0 40px;
-    height: 80px;
-    max-width: 1200px; /*Anchro para centrear el contenido*/
-    margin: 0 auto; /*centra el contenedor en la pagina*/
+    padding: 20px;
 }
 
-/*Estilo para los botones de la izquierda*/
-
-.navHome div button{
-    padding: 10px 12px;
-    font-size: 16px;
-    background-color: transparent;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 10px;
-    border: none;
-    color: #444;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.3s, color 0.3s;
-    display: inline-flex; /* ahbilita el flexbox para alinear el icono y el texto*/
-    align-items: center;
-    gap: 5px; /*espacio entre icono y texto*/
-}
-
-.navHome div button:hover{
-    background-color: #98a089;
+.navHome a{
     color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 /*Estilo para el logo central*/
@@ -109,12 +86,7 @@ header{
     transition: all 0.2s ease-in-out;
 }
 
-#btnPerfil:hover{
-    background-color: #98a089;
-    color: white;
-    border: 1px solid #98a089;
-    box-shadow: none;
-}
+
 
 .bi-person{
     font-size: 16px;

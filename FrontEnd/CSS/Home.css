@@ -12,11 +12,16 @@
 h1 {font-family: "Kaio", sans-serif;font-weight: 800;}
 h2 {font-family: "Kaio", sans-serif;font-weight: 700;}
 h3 {font-family: "Kaio", sans-serif;font-weight: 700;}
-p,a {font-family: "Kaio", sans-serif;}
+p,a ,label,input{font-family: "Kaio", sans-serif;}
+a:hover{
+    border: 1px solid white;
+}
+
 button{font-family: "Kaio", sans-serif;}
 h1{color: #F7F6F3;}
 h1{color: #F7F6F3;text-align: center}
 h2{color: white; text-align: center}
+
 
 /*-----------------------------------------------------Header---------------------------------*/
 header{
@@ -26,7 +31,9 @@ header{
     top: 0;
     width: 100%;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
+
 .banner{
     display: flex;
     flex-direction: row;
@@ -64,7 +71,7 @@ header{
     background-color: white;
     width: 40%;
     padding: 5px 5px;
-    width: 60%;
+    width: 50%;
     padding: 8px 15px;
     display: flex;
     align-items: center;
@@ -107,6 +114,8 @@ header{
     color: white;
     text-decoration: none;
     font-size: 18px;
+    border-radius: 10px;
+    padding: 10px;
     font-weight: bold;
     transition: 0.3s;
 }
@@ -137,9 +146,10 @@ header{
 
 .typing {
   white-space: nowrap;           
-  overflow: hidden;              
+  overflow: hidden; 
+  font-size: 56px;             
   border-right: 2px solid rgb(255, 255, 255); 
-  font-size: 24px;
+  transition: all 0.3s ease;
   animation: typing 24s steps(24) infinite, blink 0.5s step-end infinite alternate;
 }
 
@@ -155,6 +165,19 @@ header{
 @keyframes blink {
   50% { border-color: transparent; }
 }
+
+.btnRegistrar{
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
 
 
 .btnConvertidor {
@@ -173,11 +196,7 @@ header{
     animation: tiltPulse 3s infinite;
 }
 
-.btnConvertidor:hover{ 
-    background-color: white;
-    color: black;
-    transition: 0.3s;
-}
+
 
 /* Animación de rebote vertical */
 @keyframes tiltPulse {
@@ -363,7 +382,7 @@ footer{
     padding: 10px;
     border-radius: 10px;
     border: 2px solid white;
-    cursor: pointer;
+    cursor: pointer; 
     transition: all 0.3s ease;
 }
 
@@ -388,4 +407,366 @@ footer{
     box-shadow: 0 8px 20px rgba(0,0,0,0.35), 0 0 15px rgba(255,255,255,0.2); 
     border-color: #ffffffaa; 
     color: #ffffff;
+}
+
+.hamburger-btn {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 600px){
+
+    /*----------------------------------------------------------------------------BANNER Y MENU HAMBURGUESA MOVIL---------------------------------------------------------------------*/
+
+    .typing{
+        font-size: 14px !important;
+    }
+
+    .fondo p{
+        font-size: 12px;
+    }
+
+    .btnConvertidor{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: auto;
+        width: auto;
+    }
+
+    .banner{
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    .contLogo{
+      width: 100% !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    .contLogo h1{
+      display: none;
+    }
+
+    .logo{
+      margin: 0 auto;
+      display: block;
+    }
+
+    .buscadorYRedes{
+      display: none !important;
+    }
+
+
+    /* Ocultar el menu original */
+    .navHome {
+        display: none !important;
+    }
+
+    /* Boton hamburguesa abajo a la derecha */
+    .hamburger-btn {
+        display: flex !important;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #778470;
+        color: white;
+        border: none;
+        padding: 14px 16px;
+        border-radius: 50%;
+        font-size: 28px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+        z-index: 9999;
+        cursor: pointer;
+    }
+
+    /* Menu moviles */
+    .mobile-menu {
+        position: fixed;
+        bottom: 85px;
+        right: 20px;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+        padding: 10px 0;
+        width: 170px;
+        display: none;
+        flex-direction: column;
+        z-index: 9998;
+        animation: fadeInMenu .22s ease-out;
+    }
+
+    .mobile-menu a {
+        padding: 12px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: .2s ease;
+    }
+
+    .mobile-menu a:hover {
+        background: #f1f1f1;
+    }
+
+     @keyframes fadeInMenu {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /*----------------------------------------------------------------------------CONTENIDO MOVIL---------------------------------------------------------------------*/
+    /*----------------------------------------INTRO------------------------------*/
+
+    .intro, .intro-contenedor{
+        display: flex !important;
+    }
+
+    .intro-img{
+        display: none;
+    }
+
+    .intro-text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center !important;
+    }
+
+    .intro-text h2{
+        text-align: center;
+        margin-bottom: 60px;
+        font-size: 24px;
+    }
+
+    .intro-text p{
+        text-align: center;
+        font-size: 14px;
+    }
+
+    /*----------------------------------------NOTICIAS------------------------------*/
+    .noticias h1{
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .noticias h2{
+        font-size: 14px;
+    }
+
+    .contenedor-cartas{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Carta.Video{
+        width: 100%;
+    }
+    /*----------------------------------------------------------------------------FOOTER MOVIL---------------------------------------------------------------------*/
+    .informacionFooter{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicios, .moneyExchange, .informacion{
+        width: 50%;
+        margin-top: 50px;
+        font-size: 18px;
+    }
+
+    .footerUnder{
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    .inputSuscribe{
+        width: 100%;
+    }
+
+    .inputSuscribe, .btnSus{
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .btnSus{
+        width: auto;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 960px){
+
+    .typing{
+        font-size: 32px !important;
+    }
+
+    .btnConvertidor{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: auto;
+        width: auto;
+    }
+    
+    .banner{
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    .contLogo{
+      width: 100% !important;
+      display: flex;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    .logo{
+      margin: 0 auto;
+      display: block;
+    }
+
+    .buscadorYRedes{
+      display: none !important;
+    }
+
+
+    /* Ocultar el menu original */
+    .navHome {
+        display: none !important;
+    }
+
+
+    /* Boton hamburguesa abajo a la derecha */
+    .hamburger-btn {
+        display: flex !important;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #778470;
+        color: white;
+        border: none;
+        padding: 14px 16px;
+        border-radius: 50%;
+        font-size: 28px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+        z-index: 9999;
+        cursor: pointer;
+    }
+
+    /* Menu moviles */
+    .mobile-menu {
+        position: fixed;
+        bottom: 85px;
+        right: 20px;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+        padding: 10px 0;
+        width: 170px;
+        display: none;
+        flex-direction: column;
+        z-index: 9998;
+        animation: fadeInMenu .22s ease-out;
+    }
+
+    .mobile-menu a {
+        padding: 12px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: .2s ease;
+    }
+
+    .mobile-menu a:hover {
+        background: #f1f1f1;
+    }
+
+    @keyframes fadeInMenu {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /*----------------------------------------------------------------------------CONTENIDO MOVIL---------------------------------------------------------------------*/
+    /*----------------------------------------INTRO------------------------------*/
+
+    .intro, .intro-contenedor{
+        display: flex !important;
+    }
+
+    .intro-img{
+        display: none;
+    }
+
+    .intro-text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center !important;
+    }
+
+    .intro-text h2{
+        text-align: center;
+        margin-bottom: 60px;
+        font-size: 24px;
+    }
+
+    .intro-text p{
+        text-align: center;
+        font-size: 14px;
+    }
+
+    /*----------------------------------------NOTICIAS------------------------------*/
+    .noticias h1{
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .noticias h2{
+        font-size: 14px;
+    }
+
+    .contenedor-cartas{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Carta.Video{
+        width: 100%;
+    }
+
+    /*----------------------------------------------------------------------------FOOTER MOVIL---------------------------------------------------------------------*/
+    .informacionFooter{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicios, .moneyExchange, .informacion{
+        width: 50%;
+        margin-top: 50px;
+        font-size: 18px;
+    }
+
+    .footerUnder{
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .servicios p, .moneyExchange p, .informacion p{
+        margin-top: 10px;
+    }
+
+
+    .footerUnder{
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
