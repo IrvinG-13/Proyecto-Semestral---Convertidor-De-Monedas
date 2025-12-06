@@ -1,6 +1,5 @@
 header {
     position: relative;
-    background-color: #00110B;
 }
 
 .mainConvertidor{
@@ -8,7 +7,10 @@ header {
     height: auto;
     padding: 40px;
     align-items: center;
-    background-color: #ebeadf;
+    background-image: url(../Assets/backgroundlogin.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     flex-direction: column;
 }
 

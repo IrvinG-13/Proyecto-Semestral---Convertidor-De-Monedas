@@ -1,5 +1,5 @@
 h1{
-    color: white;
+    color: darkolivegreen ;
 }
 
 .mainNosotros{
@@ -8,7 +8,10 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #23272f;
+    background-image: url(../Assets/backgroundlogin.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 /* Sección Nosotros */
@@ -27,8 +30,8 @@ section{
 #Carta{
     display: flex;
     align-items: center;
-    background-color: #343a46;
-    color: white;
+    background-color: #EBEADF;
+    color:darkolivegreen;
     border-radius: 15px;
     overflow: hidden;
     width: 100%;                     /* ancho desktop */
@@ -57,7 +60,7 @@ section{
 }
 
 #Contenido h2{
-    color: #92fe53;
+    color:darkolivegreen;
     margin-bottom: 10px;
 }
 
