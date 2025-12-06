@@ -2,6 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/*Reset para todos los elementos*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*el padding y el borde se incluye en el ancho y alto toal del elemento*/
+    font-family: "Monserrat", sans-serif; /*Establece la fuente principal*/
+}
 
 body{
     min-height: 100vh; /* Hace que el cuerpo ocupe */
@@ -15,29 +22,44 @@ p{color: #98a089;}
 /*Navegacion*/
 
 header{
-    width: 100%; /*ocupa todo el ancho disponible*/
-    background-color: white;
-    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+     background-color:#011d10d7;
 }
 
 /*Clase navHome (Contenedro principal)*/
 
 .navHome{
-    height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /*coloca los elemntos hijos en el eje principal y colocanco un espacio entre ellos*/
     align-items: center;
-    padding: 20px;
+    padding: 0 40px;
+    height: 80px;
+    max-width: 1200px; /*Anchro para centrear el contenido*/
+    margin: 0 auto; /*centra el contenedor en la pagina*/
 }
 
-.navHome a{
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+/*Estilo para los botones de la izquierda*/
+
+.navHome div button{
+    padding: 10px 12px;
+    font-size: 16px;
+    background-color: transparent;
+    margin-left: 5px;
+    margin-right: 5px;
     border-radius: 10px;
-    padding: 10px;
-    font-weight: bold;
-    transition: 0.3s;
+    border: none;
+    color: #444;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-flex; /* ahbilita el flexbox para alinear el icono y el texto*/
+    align-items: center;
+    gap: 5px; /*espacio entre icono y texto*/
+}
+
+.navHome div button:hover{
+    background-color: #98a089;
+    color: white;
 }
 
 /*Estilo para el logo central*/
@@ -49,165 +71,102 @@ header{
     text-align: center;
 }
 
-/*Contenedor  de Perfil y Cerrar Sesion*/
-
-.opcionesUsuario{
-    display: flex;
-    align-items: center;
-    gap: 10px; 
-}
-
-/*Estilo para cerrar sesion*/
-
-#btnCerrarSesion{
-    padding: 10px;
-    font-size: 16px;
-    background-color: transparent;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 10px;
-    border: none;
-    transition: all ease 0.3s;
-}
-
-#btnCerrarSesion:hover{
-    background-color: #98a089;
-    color: white;
-}
-
-#btnPerfil{
-    background-color: transparent;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.2s ease-in-out;
-}
-
-
-
-.bi-person{
-    font-size: 16px;
-}
-
-/*Tarjeta Perfil*/
+/*Main*/
 main{
-    flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 40px;
     padding: 40px;
-    background-color: #f0f0f0;
+    background: white;
+    min-height: 100vh;
+    font-family: 'popins', sans-serif;
 }
-
-/*Tarjeta Perfil*/
-.tarjeta-perfil{
-    background-color: white;
-    width: 100%;
-    max-width: 1000px;
-    padding: 60px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+.Cuadro-Izquierda{
+    width: 260px;
+    background: white;
+    padding: 30px 20px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.07);
 }
-
-/*Avatar*/
-.seccion-avatar{
-    flex-basis: 40%; /* Hace que ocupe el 40% de la de la tarjeta*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.perfil{
+    text-align: center;
+    margin-bottom: 25px;
 }
-
-/*Circulo que contiene el avatar*/
-.circulo-avatar{
-    width: 320px;
-    height: 320px;
+.perfil img{
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
-    overflow: hidden; /*oculta cualquier parte de la imagen que se slaga del circulo*/
-    background-color: #fff;
-    border: 5px solid #fff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    background: white;
+}
+.perfil h2{
+    margin-top: 10px;
+    font-size:18px;
+    font-weight: 600;
+}
+.Menu-opciones{
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+.Menu-opciones .item{
+    padding: 12px 15px ;
+    border-radius: 12px;
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-/*Imagen dentro del circulo*/
-.circulo-avatar img{
-    width: auto;
-    height: 100%;
-    object-fit: cover; /* hace que la imagen cubra todo el area sin distorsionarse*/
-    min-width: 100%;
-    min-height: 100%;
-    transform: scale(1.05); /* Agranda un poco la imagen para que no se le vean los bordes*/
-}
-
-/*Formularios*/
-.seccion-formulario{
-    flex-basis: 60%; /*ocupa el 60% de la tarjeta*/
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.envoltura-input{
-    display: flex;
-    flex-direction: column;
-}
-
-.envoltura-input label{
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #000;
-}
-
-.envoltura-input input{
-    background-color: #cfd4da;
-    border: none;
-    border-radius: 20px;
-    padding: 12px 15px;
-    font-size: 14px;
-    color: #333;
-    outline: none; /*Elimina el borde al hacer click*/
-}
-
-/*Boton de editar*/
-.btn-profilepicture, .boton-editar{
-    margin-top: 15px;
-    align-self: flex-start;
-    padding: 8px 30px;
-    background-color: transparent;
-    border: 1px solid #555;
-    border-radius: 25px;
+    gap: 10px;
     cursor: pointer;
-    font-size: 14px;
-    transition: 0.3s;
+    color: black;
+    font-weight: 500;
+    transition: 0.2s;
 }
-
-.boton-editar:hover{
-    background-color: #333;
+.Menu-opciones .item:hover{
+    background: #9aaec2;
+}
+.Menu-opciones .Activo{
+    background: #9aaec2;
     color: white;
+    font-weight: 600;
+}
+.Menu-opciones i{
+    font-size: 18px;
+}
+.Cuadro-Derecha {
+    flex:1;
+    background: white;
+    padding: 35px 40px;
+    border-radius: 25px;
+    box-shadow:0 4px 25px rgba(0,0,0,0.07);
+}
+.Cuadro-Derecha h2{
+    font-size: 22px;
+    font-weight: 660;
+    margin-bottom: 25px;
+}
+.formulario{
+    display: flex;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 25px; 
+}
+.formularitos{
+    display: flex;
+    flex-direction: column;
+}
+.formularitos label{
+    font-size: 14px;
+    color: black;
+    margin-bottom: 5px;
+}
+.formularitos input {
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    background: #f7f7f7;
+    font-size: 14px;
+    transition: .2s;
+    color: #333;
 }
 
-/*Footer*/
-footer{
-    background-color: #d5ddc6;
-    height: 160px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.socialMedias{
-    display: flex;
-    gap: 20px;
-    font-size: 20px;
+/* Efecto cuando se puede editar */
+.formularitos input:focus {
+    outline: none;
+    border-color: #ff8b00;
+    background: #fff;
 }

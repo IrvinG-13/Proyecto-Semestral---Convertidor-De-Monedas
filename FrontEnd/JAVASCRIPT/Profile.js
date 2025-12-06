@@ -1,18 +1,27 @@
+// Profile.js - AGREGAR ESTO AL PRINCIPIO DEL ARCHIVO
+console.log("🎯 ======= PROFILE.JS INICIANDO =======");
+console.log("Archivo cargado desde:", window.location.href);
+
 const nombrePerfil = sessionStorage.getItem("Nombre_User");
 const apellidoPerfil = sessionStorage.getItem("Apellido_User");
 const correoPerfil = sessionStorage.getItem("correo")
 
-const divnombrePerfil= document.getElementById("nombrePerfil");
+const divnombrePerfil1= document.getElementById("nombrePerfil1");
+const divnombrePerfil2= document.getElementById("nombrePerfil2");
 const divapellidoPerfil = document.getElementById("apellidoPerfil");
 const divcorreoPerfil = document.getElementById("correoPerfil");
 
 console.log(nombrePerfil);
+console.log(correoPerfil);
 
 
 
-divnombrePerfil.value=nombrePerfil;
-divapellidoPerfil.value =apellidoPerfil;
+divnombrePerfil1.value=nombrePerfil+" "+apellidoPerfil;
+divnombrePerfil2.value=nombrePerfil+" "+apellidoPerfil;
+//divapellidoPerfil.value =apellidoPerfil;
 divcorreoPerfil.value=correoPerfil;
+
+
 
 // Lógica para cambiar la foto de perfil
 // Lista de imágenes en tu carpeta assets
@@ -23,8 +32,11 @@ const assetsImages = [
     
 ];
 
+
 // Mostrar galería de assets
 document.getElementById('upload-btn').addEventListener('click', function() {
+    console.log("Elemento upload-btn:", document.getElementById('upload-btn'));
+
     const gallery = document.getElementById('assets-gallery');
     gallery.style.display = gallery.style.display === 'none' ? 'block' : 'none';
     

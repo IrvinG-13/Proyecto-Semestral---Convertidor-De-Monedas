@@ -20,7 +20,6 @@ function ir(page) {
 document.getElementById("btnPerfil").addEventListener("click", () => {
   ir("Perfil");
 });
-let nombre = elisa
 //Esto es para que te abra a la pgian del login y registro, si no etas logueado
 //console.log(localStorage.removeItem("isLogged"))
 
