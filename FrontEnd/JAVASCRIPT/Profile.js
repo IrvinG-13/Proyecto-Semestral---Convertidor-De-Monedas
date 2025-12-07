@@ -29,7 +29,8 @@ const assetsImages = [
     '/FrontEnd/Assets/Avatars/Avatar1.png',
     '/FrontEnd/Assets/Avatars/Avatar2.png',
     '/FrontEnd/Assets/Avatars/Avatar3.png',
-    
+    '/FrontEnd/Assets/Avatars/Avatar4.png',
+    '/FrontEnd/Assets/Avatars/Avatar5.png',
 ];
 
 
