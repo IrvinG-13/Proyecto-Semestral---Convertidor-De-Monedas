@@ -13,12 +13,21 @@
     background-image: url(../Assets/backgroundlogin.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    width: 100%;
+    flex: 1;
 }
 body{
     min-height: 100vh; /* Hace que el cuerpo ocupe */
-    display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: #EBE9D0;
 }
 
 h1{color: #F7F6F3;}
@@ -82,8 +91,11 @@ main{
     gap: 40px;
     padding: 40px;
     background: white;
-    min-height: 100vh;
+    min-height: auto;
     font-family: 'popins', sans-serif;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 .Cuadro-Izquierda{
     width: 260px;
@@ -91,6 +103,8 @@ main{
     border-radius: 25px;
     padding: 30px 20px;
     box-shadow: 0 4px 25px rgba(0,0,0,0.07);
+    /*Para evitar que se reduzca mas*/
+    flex-shrink: 0;
 }
 .perfil{
     text-align: center;
@@ -138,28 +152,36 @@ main{
 .Cuadro-Derecha {
     flex:1;
     background: #EBEADF;
-    padding: 35px 40px;
+    padding: 30px 40px;
     border-radius: 25px;
     box-shadow:0 4px 25px rgba(0,0,0,0.07);
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
 }
 .Cuadro-Derecha h2{
     font-size: 22px;
     font-weight: 660;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 .formulario{
     display: flex;
-    grid-template-columns:repeat(2, 1fr);
-    gap: 25px; 
+    flex-direction: column;
+    gap: 25px;
+    max-width: 500px;
+    margin: 0 auto; 
 }
 .formularitos{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 .formularitos label{
     font-size: 14px;
     color: black;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    font-weight: 500;
 }
 .formularitos input {
     padding: 12px 14px;
@@ -169,12 +191,57 @@ main{
     font-size: 14px;
     transition: .2s;
     color: #333;
+    width: 100%;
+}
+.assets-gallery {
+    display: none; /* Mantiene oculto por defecto */
+    margin-top: 25px; /* Espacio arriba */
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    clear: both; /* Asegura que no flote alrededor de otros elementos */
+}
+
+.assets-gallery h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.image-grid img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.image-grid img:hover {
+    border-color: #BAC4A3;
+    transform: scale(1.05);
+}
+
+.image-grid img.selected {
+    border-color: #BAC4A3;
+    box-shadow: 0 0 0 3px rgba(186, 196, 163, 0.3);
 }
 
 /* Efecto cuando se puede editar */
 .formularitos input:focus {
     outline: none;
-    border-color: #ff8b00;
+    border-color: #BAC4A3;
     background: #fff;
 }
 
