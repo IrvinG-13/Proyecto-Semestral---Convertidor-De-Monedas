@@ -28,14 +28,14 @@ class AuthService {
     }
 
     static logout() {
-        // 🔥 LIMPIAR exactamente lo que guardas
+        // Limpia exactamente lo guardado
         sessionStorage.removeItem("Correo_user");
         localStorage.removeItem("isLogged");
         window.location.href = "login.html";
     }
 
     static isAuthenticated() {
-        // 🔥 Verificar con TUS datos
+        // Verifica con los datos
         return localStorage.getItem("isLogged") === "True" && 
                sessionStorage.getItem("Correo_user") !== null;
     }

@@ -18,15 +18,15 @@ document.getElementById('btnCrear').addEventListener('click', async function(e) 
                 if (respuesta.ok) {
                     const usuario = await respuesta.json();
                     document.getElementById('infoCreate').innerHTML = 
-                        `<p>✅ Cuenta Creada:</p>`;
+                        `<p> Cuenta Creada:</p>`;
                         
                 } else {
                     document.getElementById('infoCreate').innerHTML = 
-                        `<p>❌ Cuenta ya existente</p>`;
+                        `<p> Cuenta ya existente</p>`;
                 }
             } catch (error) {
                 document.getElementById('infoCreate').innerHTML = 
-                    `<p>❌ Error de conexión</p>`;
+                    `<p> Error de conexión</p>`;
             }
 });
      

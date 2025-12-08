@@ -33,20 +33,41 @@ main {
   background-position: center center;
 
 }
-    .controls {
+ .controls {
       display:flex;
       gap:8px;
       align-items:center;
       flex-wrap:wrap;
       justify-content:center;
     }
-    #map { height:75vh; width:90%; max-width:1100px; border:2px solid #ddd; border-radius:8px; }
-    #search-box { 
-     background-color: #EBEADF; width:320px; padding:6px 10px; font-size:14px; border-radius:6px; border:1px solid #ccc; }
-    .btn {
-      padding:8px 12px; border:1px solid #ccc; background:#EBEADF; border-radius:6px; cursor:pointer;
+#map { height:75vh;
+   width:90%; 
+   max-width:1100px; 
+   border:2px solid #ddd; 
+   border-radius:8px; }
+#search-box { 
+     background-color: #EBEADF;
+      width:320px;
+       padding:6px 10px; 
+       font-size:14px; 
+       border-radius:6px; 
+       border:1px solid #ccc; }
+.btn {
+      padding:8px 12px; 
+      border:1px solid #ccc; 
+      background:#EBEADF;
+       border-radius:6px;
+        cursor:pointer;
     }
-    .btn:hover { background:#eee; }
-    #results { width:90%; max-width:1100px; margin-top:8px; }
-    #status { margin-top:6px; font-size:14px; color:#333; }
-    select { padding:6px; border-radius:6px; background-color: #EBEADF; border:1px solid #ccc; }
+.btn:hover { background:#eee; 
+}
+#results { width:90%;
+   max-width:1100px; 
+   margin-top:8px; }
+#status { margin-top:6px; 
+  font-size:14px; 
+  color:#333; }
+select { padding:6px; 
+  border-radius:6px; 
+  background-color: #EBEADF; 
+  border:1px solid #ccc; }

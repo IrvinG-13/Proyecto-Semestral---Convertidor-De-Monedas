@@ -13,18 +13,18 @@ document.getElementById('btnLogin').addEventListener('click', async function(e) 
                 const respuesta = await AuthService.login(correo_user, contraseña_user);
 
                 if (respuesta.success) {
-                    infoDiv.innerHTML = `<p>✅ Sesion Iniciada:</p>`;
+                    infoDiv.innerHTML = `<p> Sesion Iniciada:</p>`;
                     window.location.href = "home.html"; // se puede colocar un delay aqui si se desea
                     localStorage.setItem("isLogged", "True");
                     
                 } else {
                     document.getElementById('info').innerHTML = 
-                        `<p>❌ Usuario no encontrado</p>`;
+                        `<p> Usuario no encontrado</p>`;
                         alert("Usuario no encontrado");
                 }
             } catch (error) {
                 document.getElementById('info').innerHTML = 
-                    `<p>❌ Error inesperado</p>`;
+                    `<p> Error inesperado</p>`;
             }
 
 });

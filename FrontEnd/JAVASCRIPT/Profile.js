@@ -1,5 +1,5 @@
-// Profile.js - AGREGAR ESTO AL PRINCIPIO DEL ARCHIVO
-console.log("🎯 ======= PROFILE.JS INICIANDO =======");
+
+console.log(" ======= PROFILE.JS INICIANDO =======");
 console.log("Archivo cargado desde:", window.location.href);
 
 const nombrePerfil = sessionStorage.getItem("Nombre_User");
